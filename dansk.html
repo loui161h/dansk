@@ -4,12 +4,227 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passion for indretning</title>
+    <title>dansk.</title>
     <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favicon.png">
+
+    <style>
+        /* The side navigation menu */
+
+        span {
+            font-size: 2rem;
+            top: 0;
+            left: 0;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            /* 100% Full-height */
+            width: 0;
+            /* 0 width - change this with JavaScript */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            background-color: #ffffff;
+            /* Black*/
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            padding-top: 90px;
+            /* Place content 60px from the top */
+            transition: 0.5s;
+            /* 0.5 second transition effect to slide in the sidenav */
+
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 10px 8px 8px 140px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+            font-family: Avenir;
+            font-weight: 100;
+            text-transform: uppercase;
+
+
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #cbad99;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: -100px;
+            font-size: 36px;
+
+
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        body {
+            margin: 0;
+
+            * {
+                box-sizing: border-box
+            }
+
+            ;
+        }
+
+        #splash {
+
+            background-attachment: fixed;
+
+        }
+
+        img {
+            width: 100%;
+            top: 0;
+        }
+
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+        }
+
+        h2 {
+            font-family: Avenir;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 2rem;
+
+        }
+
+        .logo img {
+            width: 160px;
+            height: 63.5px;
+            align-items: flex-start;
+            top: 0;
+            position: absolute;
+            padding: 5px 0px 0px 120px;
+        }
+
+        .tekst {
+            margin: 320px;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        #sidebar .sidetekst p {
+            font-family: Avenir;
+            font-size: 0.9rem;
+            color: black;
+            letter-spacing: 0.5px;
+            transform: rotate(-90deg);
+            position: fixed;
+            margin-top: 78vw;
+            font-weight: 100;
+        }
+
+        footer {
+            background-color: #F4F1ED;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Avenir;
+            padding: 80px;
+
+        }
+
+        footer p {
+            line-height: 35px;
+            word-spacing: 18px;
+        }
+    </style>
+
 </head>
 
 <body>
-    <script src=""></script>
-</body>
 
-</html>
+
+
+    <section id="splash">
+
+        <img src="forsidebilleder/photo-1481277542470-605612bd2d61.jpeg" alt="forside">
+    </section>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                <img src="forsidebilleder/logo.png">
+            </div>
+            <span onclick="openNav()">☰</span>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="sortiment.html">Sortiment</a>
+                <a href="#">Kundeservice</a>
+                <a href="#">Nyhedsbrev</a>
+                <a href="#">Om Dansk</a>
+                <a href="#">Kontakt</a>
+            </div>
+
+            <!-- Use any element to open the sidenav -->
+
+
+            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+
+        </nav>
+
+    </header>
+
+    <div class="tekst">
+        <h2>Skab et personligt hjem, som afspejler dig og din hverdag. Kombinér lækre designmøbler med arvemøbler og loppefund – det giver hjemmet personlighed og en historie.</h2>
+    </div>
+
+
+
+    <section id="sidebar">
+        <div class="sidetekst">
+            <p>est. denmark 2020</p>
+        </div>
+    </section>
+    <footer>
+        <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+    </footer>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "400px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body></html>
