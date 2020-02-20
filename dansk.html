@@ -10,10 +10,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favicon.png">
 
     <style>
-        .container {
-            margin: 0;
-        }
-
         /* The side navigation menu */
 
         span {
@@ -43,8 +39,6 @@
             transition: 0.5s;
             /* 0.5 second transition effect to slide in the sidenav */
         }
-
-
 
         /* The navigation menu links */
         .sidenav a {
@@ -96,21 +90,10 @@
             background-attachment: fixed;
             background-size: cover;
 
-
             * {
-                box-sizing: border-box
+                box-sizing: border-box;
             }
-
-            ;
         }
-
-        /*
-        #splash {
-
-            background-attachment: fixed;
-
-        }
-*/
 
         img {
             width: 100%;
@@ -127,9 +110,6 @@
             font-style: italic;
             font-weight: 100;
             font-size: 2rem;
-
-
-
         }
 
         .logo img {
@@ -138,17 +118,15 @@
             align-items: flex-start;
             top: 0;
             margin-left: 80px;
-
-
         }
 
         .tekst {
-            margin: 250px;
+            margin: 180px;
             text-align: center;
-            line-height: 45px;
+            line-height: 40px;
         }
 
-        #sidebar .sidetekst p {
+        .sidebar {
             font-family: Avenir;
             font-size: 0.9rem;
             color: black;
@@ -165,21 +143,15 @@
             text-transform: uppercase;
             font-family: Avenir;
             padding: 60px;
-
             position: relative;
-
         }
 
         footer p {
             line-height: 35px;
             word-spacing: 18px;
-
-
-
         }
 
         .container {
-
             display: inline-block;
         }
 
@@ -190,7 +162,6 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 width: 100%;
-
             }
     </style>
 
@@ -203,10 +174,14 @@
 
         <nav>
             <div class="container">
-                <span onclick="openNav()">☰</span>
+                <span onclick="openNav()">+</span>
 
                 <div class="logo">
                     <img src="forsidebilleder/logo.png">
+                </div>
+
+                <div class="sidebar">
+                    <p>est. denmark 2020</p>
                 </div>
             </div>
 
@@ -232,14 +207,6 @@
     <div class="tekst">
         <h2>Skab et personligt hjem, som afspejler dig og din hverdag. Kombinér lækre designmøbler med arvemøbler og loppefund – det giver hjemmet personlighed og en historie.</h2>
     </div>
-
-
-
-    <section id="sidebar">
-        <div class="sidetekst">
-            <p>est. denmark 2020</p>
-        </div>
-    </section>
 
     <footer>
         <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
