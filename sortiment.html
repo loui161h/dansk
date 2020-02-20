@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dansk.</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Poppins:700|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-color: white;
+    }
+
+    nav {
+        text-align: center;
+        padding: 16px;
+        margin-top: 0vw;
+    }
+
+
+    nav .valgt {
+        background-color: #fffff5;
+
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 18px;
+        font-family: Brandon Grotesque;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+
+
+    article {
+        border: 0.5px solid black;
+        background-color: #fffff5;
+        border: none;
+        padding: 16px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .data-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1000px;
+        margin: 0 auto;
+        grid-gap: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-family: Brandon Grotesque;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 16px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-family: 'Questrial', sans-serif;
+        font-family: Avenir;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        font-family: 'Questrial', sans-serif;
+        font-family: Avenir;
+        line-height: 22px;
+    }
+</style>
+
+
+<div id="logo">
+    <img src="logo.svg" alt="logo">
+</div>
+
+<body>
+
+    <nav class="menu">
+        <button class="filter valgt" data-ret="alle">Alle</button>
+        <button class="filter" data-ret="stole">Stole</button>
+        <button class="filter" data-ret="sofaer">Sofaer</button>
+        <button class="filter" data-ret="borde">Borde</button>
+        <button class="filter" data-ret="belysning">Belysning</button>
+        <h1>Alle</h1>
+    </nav>
+
+
+    <section class="data-container">
+
+    </section>
+
+
+    <template>
+        <article class="moebler">
+            <h2></h2>
+            <img src="" alt="">
+            <p class="kort"></p>
+            <p class="producent"></p>
+        </article>
+    </template>
+
+    <main></main>
+
+
+
+    <script>
+        let indretning = [];
+        const idSheet = "17Dd7DvkPaFamNUdUKlrFgnH6POvBJXac7qyiS6zNRw0";
+        const endpoint = `https:spreadsheets.google.com/feeds/list/${idSheet}/od6/public/values?alt=json`;
+
+        let filter = "alle";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            document.querySelectorAll("nav button").forEach(knap => {
+                knap.addEventListener("click", filtrerIndretning)
+            });
+            loadData();
+        }
+        async function loadData() {
+            const response = await fetch(endpoint);
+            indretning = await response.json();
+            console.log(indretning);
+            visIndretning();
+        }
+
+        function visIndretning() {
+            const container = document.querySelector(".data-container");
+            const template = document.querySelector("template");
+            container.textContent = "";
+            indretning.feed.entry.forEach(moebler => {
+                if (filter == "alle" || filter == moebler.gsx$kategori.$t) {
+                    let klon = template.cloneNode(true).content;
+                    klon.querySelector("h2").textContent = moebler.gsx$navn.$t;
+                    klon.querySelector("p + p").textContent = `Pris: ${moebler.gsx$pris.$t}kr.`;
+                    klon.querySelector("p").textContent = moebler.gsx$kort.$t;
+                    klon.querySelector("img").src = `imgs/small/${moebler.gsx$billede.$t}-sm.jpg`;
+                    klon.querySelector(".moebler").addEventListener("click", () => {
+                        //visDetalje(menukort);
+                        console.log("test");
+                        location.href = "single.html?id=" + moebler.gsx$id.$t;
+                    });
+                    container.appendChild(klon);
+                }
+            });
+        }
+
+        // funktion der filtrerer menukort (json)
+        function filtrerIndretning() {
+            filter = this.dataset.ret; // sæt variabel "filter" til aktuel værdi
+            document.querySelector(".valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
+            this.classList.add("valgt") // marker den nyvalgte knap
+            document.querySelector("h1").textContent = this.textContent;
+            visIndretning(); // kald funktionen vis igen med nyt filter
+        }
+    </script>
+</body></html>
