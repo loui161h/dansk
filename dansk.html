@@ -14,8 +14,8 @@
 
         span {
             font-size: 2rem;
-            top: 0;
-            left: 0;
+            margin: 1rem;
+
 
         }
 
@@ -91,6 +91,11 @@
 
         body {
             margin: 0;
+            background-image: url(forsidebilleder/interor.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
 
             * {
                 box-sizing: border-box
@@ -99,11 +104,13 @@
             ;
         }
 
+        /*
         #splash {
 
             background-attachment: fixed;
 
         }
+*/
 
         img {
             width: 100%;
@@ -121,6 +128,8 @@
             font-weight: 100;
             font-size: 2rem;
 
+
+
         }
 
         .logo img {
@@ -128,8 +137,8 @@
             height: 63.5px;
             align-items: flex-start;
             top: 0;
-            position: absolute;
-            padding: 5px 0px 0px 120px;
+
+
         }
 
         .tekst {
@@ -154,14 +163,34 @@
             text-align: center;
             text-transform: uppercase;
             font-family: Avenir;
-            padding: 80px;
+            padding: 60px;
+
+            position: relative;
 
         }
 
         footer p {
             line-height: 35px;
             word-spacing: 18px;
+
+
+
         }
+
+        .container {
+
+            display: inline-block;
+        }
+
+        @media only screen and (min-width: 800px) {
+            body {
+                background-image: url(forsidebilleder/photo-1481277542470-605612bd2d61.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                width: 100%;
+
+            }
     </style>
 
 </head>
@@ -169,20 +198,17 @@
 <body>
 
 
-
-    <section id="splash">
-
-        <img src="forsidebilleder/photo-1481277542470-605612bd2d61.jpeg" alt="forside">
-    </section>
-
     <header>
 
         <nav>
+            <div class="container">
+                <span onclick="openNav()">☰</span>
 
-            <div class="logo">
-                <img src="forsidebilleder/logo.png">
+                <div class="logo">
+                    <img src="forsidebilleder/logo.png">
+                </div>
             </div>
-            <span onclick="openNav()">☰</span>
+
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="sortiment.html">Sortiment</a>
@@ -213,9 +239,11 @@
             <p>est. denmark 2020</p>
         </div>
     </section>
+
     <footer>
         <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
     </footer>
+
     <script>
         /* Set the width of the side navigation to 250px */
         function openNav() {
@@ -227,4 +255,6 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
+
+
 </body></html>
