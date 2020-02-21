@@ -10,8 +10,89 @@
 </head>
 
 <style>
+    span {
+        display: inline-block;
+        margin: 1rem 2rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    span a:hover {
+        color: #cbad99;
+    }
+
+    .sidenav {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        left: 0;
+        background-color: #ffffff;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 120px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 10px 8px 8px 100px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #000000;
+        display: block;
+        transition: 0.3s;
+        font-family: Avenir;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #cbad99;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        font-size: 2.5rem;
+        display: inline-block;
+        margin: 1rem 2rem;
+        cursor: pointer;
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
     body {
         background-color: white;
+        margin: 0;
     }
 
     nav {
@@ -29,7 +110,7 @@
     button {
         font-size: 1rem;
         padding: 18px;
-        font-family: Brandon Grotesque;
+        font-family: "Raleway";
         border: none;
         cursor: pointer;
         background-color: transparent;
@@ -48,6 +129,23 @@
         width: 100%;
     }
 
+    .splash {
+        background-image: url(forsidebilleder/svanen.jpg);
+        width: 100%;
+        background-size: cover;
+        opacity: 50%;
+
+    }
+
+    .logo img {
+        width: 175px;
+        height: 67px;
+        align-items: flex-start;
+        top: 20px;
+        margin-left: 80px;
+        position: absolute;
+    }
+
     .data-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -59,7 +157,7 @@
     h1 {
         font-size: 2rem;
         text-align: center;
-        font-family: Brandon Grotesque;
+        font-family: 'Raleway', sans-serif;
         text-transform: uppercase;
         font-weight: 400;
         margin-top: 16px;
@@ -67,25 +165,58 @@
     }
 
     h2 {
-        font-family: 'Questrial', sans-serif;
-        font-family: Avenir;
+        font-family: 'Raleway', sans-serif;
         font-weight: bold;
         text-align: center;
     }
 
     p {
-        font-family: 'Questrial', sans-serif;
+
         font-family: Avenir;
         line-height: 22px;
     }
+
+
+    footer {
+        background-color: #F4F1ED;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Avenir;
+        padding: 60px;
+        position: relative;
+        word-spacing: 20px;
+    }
+
 </style>
 
+<header>
 
-<div id="logo">
-    <img src="logo.svg" alt="logo">
+
+    <div class="logo">
+        <img src="forsidebilleder/logo.png">
+    </div>
+
+
+
+</header>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="forsidebilleder/logo.png">
+    <a href="dansk.html">Forside</a><br>
+    <a href="#">Kundeservice</a>
+    <a href="#">Nyhedsbrev</a>
+    <a href="#">Om Dansk</a>
+    <a href="#">Kontakt</a>
 </div>
 
 <body>
+
+    <div class="splash">
+        <img src="forsidebilleder/svanen.jpg">
+    </div>
+
+    <h1>Sortiment</h1>
 
     <nav class="menu">
         <button class="filter valgt" data-ret="alle">Alle</button>
@@ -104,21 +235,35 @@
 
     <template>
         <article class="moebler">
-            <h2></h2>
             <img src="" alt="">
-            <p class="kort"></p>
+            <h2></h2>
             <p class="producent"></p>
+            <p class="designer"></p>
+            <p class="beskrivelse"></p>
+            <p class="pris"></p>
         </article>
     </template>
 
     <main></main>
 
-
+    <footer>
+        <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+    </footer>
 
     <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "477px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
         let indretning = [];
-        const idSheet = "17Dd7DvkPaFamNUdUKlrFgnH6POvBJXac7qyiS6zNRw0";
-        const endpoint = `https:spreadsheets.google.com/feeds/list/${idSheet}/od6/public/values?alt=json`;
+        const idSheet = "1SKyMmjjoEo0bBPLSaxw6xo-L9joE2kpNMkeeTCqwq4A";
+        const endpoint = "https://spreadsheets.google.com/feeds/list/1SKyMmjjoEo0bBPLSaxw6xo-L9joE2kpNMkeeTCqwq4A/od6/public/values?alt=json";
 
         let filter = "alle";
 
@@ -145,13 +290,15 @@
                 if (filter == "alle" || filter == moebler.gsx$kategori.$t) {
                     let klon = template.cloneNode(true).content;
                     klon.querySelector("h2").textContent = moebler.gsx$navn.$t;
-                    klon.querySelector("p + p").textContent = `Pris: ${moebler.gsx$pris.$t}kr.`;
-                    klon.querySelector("p").textContent = moebler.gsx$kort.$t;
-                    klon.querySelector("img").src = `imgs/small/${moebler.gsx$billede.$t}-sm.jpg`;
+                    klon.querySelector(".pris").textContent = `Pris: ${moebler.gsx$pris.$t}kr.`;
+                    klon.querySelector(".producent").textContent = moebler.gsx$producent.$t;
+                    klon.querySelector(".designer").textContent = moebler.gsx$designer.$t;
+                    klon.querySelector(".beskrivelse").textContent = moebler.gsx$beskrivelse.$t;
+                    klon.querySelector("img").src = `imgs/${moebler.gsx$billede.$t}`;
                     klon.querySelector(".moebler").addEventListener("click", () => {
                         //visDetalje(menukort);
                         console.log("test");
-                        location.href = "single.html?id=" + moebler.gsx$id.$t;
+                        location.href = "single.html" + moebler.gsx$id.$t;
                     });
                     container.appendChild(klon);
                 }
@@ -163,8 +310,11 @@
             filter = this.dataset.ret; // sæt variabel "filter" til aktuel værdi
             document.querySelector(".valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
-            document.querySelector("h1").textContent = this.textContent;
+            document.querySelector("h2").textContent = this.textContent;
             visIndretning(); // kald funktionen vis igen med nyt filter
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
