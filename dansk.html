@@ -11,6 +11,18 @@
 
     <style>
         /* The side navigation menu */
+        body {
+            margin: 0;
+            background-image: url(forsidebilleder/interor.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+
+            * {
+                box-sizing: border-box;
+            }
+        }
 
         span {
             display: inline-block;
@@ -92,34 +104,17 @@
             }
         }
 
-        body {
-            margin: 0;
-            background-image: url(forsidebilleder/interor.jpeg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+        /* Menu slut */
 
-            * {
-                box-sizing: border-box;
-            }
-        }
+
+
+        /*Mobil version */
 
         img {
             width: 100%;
-            top: 0;
         }
 
-        h1 {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-        }
 
-        h2 {
-            font-family: Avenir;
-            font-style: italic;
-            font-weight: 100;
-            font-size: 2rem;
-        }
 
         .logo img {
             width: 175px;
@@ -130,17 +125,30 @@
             position: fixed;
         }
 
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+        }
+
+        h3 {
+            font-family: Avenir;
+            font-size: 1.1rem;
+        }
+
         .tekst h2 {
             margin: 50px;
             padding: 40px;
             text-align: center;
-            font-size: 1.5rem;
-            line-height: 36px;
+            font-size: 1.2rem;
+            line-height: 26px;
+            font-style: italic;
+            font-family: Avenir;
+            font-weight: 100;
         }
 
 
 
-        .sidebar {
+        /* .sidebar {
             font-family: Avenir;
             font-size: 0.9rem;
             color: black;
@@ -150,7 +158,9 @@
             margin-top: 300px;
             font-weight: 100;
             display: inline-block;
-        }
+            margin:
+
+        }*/
 
 
         footer {
@@ -158,18 +168,17 @@
             text-align: center;
             text-transform: uppercase;
             font-family: Avenir;
-            padding: 60px;
-            position: absolute;
+            padding: 20px;
+            position: relative;
             bottom: 0;
             left: 0;
             right: 0;
-
-
+            font-size: 0.7rem;
         }
 
         footer p {
-            line-height: 35px;
-            word-spacing: 18px;
+            line-height: 22px;
+            word-spacing: 12px;
         }
 
         footer p a:hover {
@@ -190,6 +199,128 @@
             position: fixed;
         }
 
+        .pk22 img {
+            width: 80%;
+            padding-left: 50px;
+        }
+
+        .pk22 p {
+            font-family: Avenir;
+            font-size: 1rem;
+            margin: 0;
+            width: 280px;
+            font-weight: 100;
+        }
+
+        .pk22 h3 {
+            font-family: Avenir;
+            font-size: 1.1rem;
+            padding-left: 100px;
+        }
+
+
+        /*    .box1 {
+            width: 825px;
+            height: 400px;
+            background-color: #DCCEC1;
+        }*/
+
+        .ikoner img {
+            display: inline-block;
+            justify-content: flex-end;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            left: 78vw;
+            top: 4vw;
+            padding: 4px;
+        }
+
+
+        .socialemedier img {
+            display: inline-block;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            padding: 6px;
+        }
+
+
+        .border {
+            border: solid 0.5px black;
+            width: 30%;
+            margin: 40px 180px;
+            margin-top: 40px;
+        }
+
+        .section2 {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 100px;
+        }
+
+        .section2 h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .section22 h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 30px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        .section2 p {
+            font-family: Avenir;
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 100;
+            text-transform: none;
+        }
+
+        .pk22 h3 {
+            font-family: Avenir;
+            font-size: 1.1rem;
+            /*       margin-top: 0px;*/
+            padding-left: 100px;
+        }
+
+        .citat {
+            background-color: #EBE5DB;
+            margin: 60px;
+            padding: 25px 50px;
+            text-align: center;
+            font-family: Avenir;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+
+        .kontakt {
+            margin: 50px;
+            padding: 40px;
+            text-align: center;
+            font-family: Avenir;
+        }
+
+        .kontakt p {
+            font-family: Avenir;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+
+
+
+
+
+
+
+
+
         @media only screen and (min-width: 800px) {
             body {
                 background-image: url(forsidebilleder/photo-1481277542470-605612bd2d61.jpeg);
@@ -199,19 +330,167 @@
                 width: 100%;
             }
 
-            .tekst h2 {
-                padding: 140px;
-                margin: 160px;
-                text-align: center;
-                line-height: 40px;
-                font-size: 1.9rem;
 
+            .ikoner img {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                left: 92vw;
+                top: 1vw;
+                position: relative;
+                padding: 4px;
+            }
+
+
+            .socialemedier img {
+                display: inline-block;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                word-spacing: 18px;
+            }
+
+            .tekst h2 {
+                padding: 100px;
+                margin: 135px;
+                text-align: center;
+                line-height: 45px;
+                font-size: 2.2rem;
+                font-style: italic;
+            }
+
+            footer {
+                background-color: #F4F1ED;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: Avenir;
+                padding: 40px;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 1rem;
+            }
+
+            footer p {
+                line-height: 37px;
+                word-spacing: 12px;
+            }
+
+            .border {
+                border: solid 0.5px black;
+                width: 20%;
+                margin: 40px 520px;
+                margin-top: 40px;
+            }
+
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+
+            .section2 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .section2 h3 {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+
+            .section22 h1 {
+                text-align: center;
+                font-size: 2rem;
+                margin: 30px;
+                margin-top: 0;
+                text-transform: uppercase;
+            }
+
+            .section2 p {
+                font-family: Avenir;
+                font-size: 1.2rem;
+                margin: 0;
+                font-weight: 100;
+                text-transform: none;
+            }
+
+
+            .pk22 {
+                display: flex;
+                width: 60%;
+                justify-content: center;
+
+            }
+
+            .pk22 {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 500px;
+
+            }
+
+            .pk22 img {
+                width: 100%;
+                margin: 100px;
+
+            }
+
+            .pk22 p {
+                font-family: Avenir;
+                font-size: 1.2rem;
+                margin: 0;
+                width: 300px;
+                font-weight: 100;
+            }
+
+            .pk22 h3 {
+                font-family: Avenir;
+                font-size: 1.5rem;
+                margin: 0;
+                margin-top: 60px;
+                padding-left: 55px;
+            }
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 2;
+                flex-basis: 300px;
+                font-family: Avenir;
+                margin: 40px 100px;
+            }
+
+            .citat {
+                background-color: #EBE5DB;
+                margin: 200px;
+                padding: 100px;
+                text-align: center;
+                font-family: Avenir;
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+
+            .kontakt p {
+                margin: 20px 135px;
+                text-align: center;
+                line-height: 45px;
+                font-size: 2.2rem;
+            }
+
+            .kontakt h2 {
+                text-align: center;
+                line-height: 45px;
+                font-size: 2.4rem;
             }
 
             footer {
                 position: relative;
             }
         }
+
     </style>
 
 </head>
@@ -229,10 +508,17 @@
                     <img src="forsidebilleder/logo.png">
                 </div>
 
-                <div class="sidebar">
+                <!--<div class="sidebar">
                     <p>est. denmark 2020</p>
-                </div>
+                </div>-->
             </div>
+
+            <div class="ikoner">
+                <img src="ui/soeg.svg">
+                <img src="ui/kurv.svg">
+            </div>
+
+
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -243,6 +529,7 @@
                 <a href="#">Om Dansk</a>
                 <a href="#">Kontakt</a>
             </div>
+
 
             <!-- Use any element to open the sidenav -->
 
@@ -259,6 +546,57 @@
     </div>
 
 
+    <div class="section">
+        <div class="pk22">
+            <img src="forsidebilleder/1600x900_pk22%20wicker%20png.png" alt="pk22billede">
+        </div>
+        <div class="pk22">
+            <h3>UDFORSK<p>vores sortiment af smukke designklassikere, få inspiration til indretning og bliv opdateret på de nyeste tendenser indenfor boligindretning.</p>
+            </h3>
+        </div>
+    </div>
+
+    <div class="section22">
+        <div class="border"></div>
+        <h1>Gå på opdagelse i tidens tendenser</h1>
+    </div>
+
+
+    <div class="section2">
+        <div class="col">
+            <img src="forsidebilleder/farveguidebom200101-23fowHEzd9HnAbpGTCKvfg.jpg" alt="beige">
+            <h3>Blid beige og sort<p>Beige er tilbage i boligen og med god grund. De lyse, lette nuancer er nemlig geniale, hvis du vil skabe en rolig base. Spæd op med tørrede blomster, der let blender ind i farveskalaen og giver looket dynamik og kant og rund af med mørke, sorte detaljer, der giver det sidste touch og dybde til udtrykket.</p>
+            </h3>
+        </div>
+        <div class="col">
+            <img src="forsidebilleder/fabula_ask_rug_grey_wool_hand-loom_1616_a1_300dpi_large-2P8jWb43P2r_BIh5VnJk3w.jpg" alt="beige">
+            <h3>Ny gulvmakker<p>I lang tid har de særligt eftertragtede marokkanske tæpper været overalt, men nu er en ny type gulvtæpper langsomt ved at skubbe de håndknyttede unikatæpper lidt til side - nemlig de ensfarvede, glansfulde luvtæpper, der lige nu marcherer ind på stue- og soveværelsesgulve landet over, og melder sig som nyeste trend.</p>
+            </h3>
+        </div>
+
+    </div>
+
+
+    <div class="section22">
+        <div class="border"></div>
+    </div>
+
+    <div class="citat">
+        <p>“Godt <b>design</b> og god <b>kvalitet</b> er <b>grundstenene</b> i en indretning, du kan vokse sammen med”</p>
+    </div>
+
+
+    <div class="section22">
+        <div class="border"></div>
+    </div>
+
+    <div class="kontakt">
+        <h2><b>Hvordan kan vi hjælpe dig?</b>
+            <p>Tøv endelig ikke med at sende os en besked. Sidder du med et eller flere spørgsmål, så udfylder du blot nedenstående kontaktformular, og vi vender hurtigst muligt retur til dig.</p>
+        </h2>
+    </div>
+
+
 
     <script>
         /* Set the width of the side navigation to 250px */
@@ -270,11 +608,20 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
     </script>
 
 
 </body>
 
 <footer>
+
     <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
-</footer></html>
+    <div class="socialemedier">
+        <img src="ui/fb.svg">
+        <img src="ui/ig.svg">
+    </div>
+
+</footer>
+
+</html>
