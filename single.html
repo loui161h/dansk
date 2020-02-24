@@ -32,6 +32,7 @@
         img {
             width: 100%;
         }
+
     </style>
 </head>
 
@@ -90,10 +91,13 @@
                     detalje.querySelector(".designer").textContent = moebel.gsx$designer.$t;
                     detalje.querySelector(".beskrivelse").textContent = moebel.gsx$beskrivelse.$t;
 
-                    detalje.querySelector("img").src = `imgs/${moebel.gsx$billede.$t}`;
+                    detalje.querySelector("img").src = moebel.gsx$billede.$t;
                 }
             });
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

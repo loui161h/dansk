@@ -91,20 +91,22 @@
     }
 
     body {
-        background-color: white;
         margin: 0;
     }
 
-    nav {
+    .menu {
         text-align: center;
         padding: 16px;
         margin-top: 0vw;
     }
 
 
-    nav .valgt {
-        background-color: #fffff5;
+    button:hover {
+        color: #cbad99;
+    }
 
+    button:active {
+        color: #cbad99;
     }
 
     button {
@@ -118,22 +120,16 @@
     }
 
 
-    article {
-        border: 0.5px solid black;
-        background-color: #fffff5;
-        border: none;
-        padding: 16px;
-    }
-
     img {
-        width: 100%;
+        width: 80%;
     }
 
-    .splash {
+    #splash {
         background-image: url(forsidebilleder/svanen.jpg);
         width: 100%;
         background-size: cover;
         opacity: 50%;
+        height: 80vh;
 
     }
 
@@ -162,69 +158,163 @@
         font-weight: 400;
         margin-top: 16px;
         margin-bottom: 10px;
+
     }
 
     h2 {
         font-family: 'Raleway', sans-serif;
         font-weight: bold;
         text-align: center;
+        text-transform: uppercase;
     }
 
     p {
-
         font-family: Avenir;
         line-height: 22px;
     }
 
 
-    footer {
-        background-color: #F4F1ED;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: Avenir;
-        padding: 60px;
-        position: relative;
-        word-spacing: 20px;
+
+
+    .border {
+        border: solid 0.5px black;
+        width: 30%;
+        margin: 40px 180px;
+        margin-top: 40px;
     }
 
+    .sidenav img {
+        display: inline-block;
+        width: 175px;
+        height: 67px;
+        align-items: flex-start;
+        top: 20px;
+        margin-left: 80px;
+        position: fixed;
+    }
+
+    span {
+        display: inline-block;
+        margin: 1rem 2rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    span a:hover {
+        color: #cbad99;
+    }
+
+    h1 {
+        padding-top: 250px;
+    }
+
+
+
+
+    @media only screen and (min-width: 800px) {
+
+        .ikoner img {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            left: 92vw;
+            top: 1vw;
+            position: relative;
+            padding: 4px;
+        }
+
+
+        .socialemedier img {
+            display: inline-block;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            word-spacing: 20px;
+        }
+
+
+        footer {
+            background-color: #F4F1ED;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Avenir;
+            padding: 40px;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 1rem;
+        }
+
+        footer p {
+            line-height: 37px;
+            word-spacing: 12px;
+        }
+
+    }
 </style>
 
-<header>
-
-
-    <div class="logo">
-        <img src="forsidebilleder/logo.png">
-    </div>
-
-
-
-</header>
-
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <img src="forsidebilleder/logo.png">
-    <a href="dansk.html">Forside</a><br>
-    <a href="#">Kundeservice</a>
-    <a href="#">Nyhedsbrev</a>
-    <a href="#">Om Dansk</a>
-    <a href="#">Kontakt</a>
-</div>
 
 <body>
 
-    <div class="splash">
-        <img src="forsidebilleder/svanen.jpg">
-    </div>
 
-    <h1>Sortiment</h1>
+    <header>
+
+
+        <nav>
+            <div class="container">
+                <span onclick="openNav()">+</span>
+
+                <div class="logo">
+                    <img src="forsidebilleder/logo.png">
+                </div>
+
+                <!--<div class="sidebar">
+                    <p>est. denmark 2020</p>
+                </div>-->
+            </div>
+
+            <div class="ikoner">
+                <img src="ui/soeg.svg">
+                <img src="ui/kurv.svg">
+            </div>
+
+
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <img src="forsidebilleder/logo.png">
+                <a href="sortiment.html">Sortiment</a><br>
+                <a href="#">Kundeservice</a>
+                <a href="#">Nyhedsbrev</a>
+                <a href="#">Om Dansk</a>
+                <a href="#">Kontakt</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+
+
+            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        </nav>
+
+    </header>
+
+
+    <section id="splash">
+
+        <h1>Sortiment</h1>
+
+    </section>
+
+
 
     <nav class="menu">
-        <button class="filter valgt" data-ret="alle">Alle</button>
-        <button class="filter" data-ret="stole">Stole</button>
-        <button class="filter" data-ret="sofaer">Sofaer</button>
-        <button class="filter" data-ret="borde">Borde</button>
-        <button class="filter" data-ret="belysning">Belysning</button>
-        <h1>Alle</h1>
+        <button class="filter valgt" data-moebler="alle">Alle</button>
+        <button class="filter" data-moebler="Stole">Stole</button>
+        <button class="filter" data-moebler="Sofaer">Sofaer</button>
+        <button class="filter" data-moebler="Borde">Borde</button>
+        <button class="filter" data-moebler="Belysning">Belysning</button>
+        <h2>Alle</h2>
     </nav>
 
 
@@ -236,10 +326,7 @@
     <template>
         <article class="moebler">
             <img src="" alt="">
-            <h2></h2>
-            <p class="producent"></p>
-            <p class="designer"></p>
-            <p class="beskrivelse"></p>
+            <p class="navn"></p>
             <p class="pris"></p>
         </article>
     </template>
@@ -248,6 +335,10 @@
 
     <footer>
         <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+        <div class="socialemedier">
+            <img src="ui/fb.svg">
+            <img src="ui/ig.svg">
+        </div>
     </footer>
 
     <script>
@@ -262,10 +353,9 @@
         }
 
         let indretning = [];
+        let filter = "alle";
         const idSheet = "1SKyMmjjoEo0bBPLSaxw6xo-L9joE2kpNMkeeTCqwq4A";
         const endpoint = "https://spreadsheets.google.com/feeds/list/1SKyMmjjoEo0bBPLSaxw6xo-L9joE2kpNMkeeTCqwq4A/od6/public/values?alt=json";
-
-        let filter = "alle";
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -289,32 +379,27 @@
             indretning.feed.entry.forEach(moebler => {
                 if (filter == "alle" || filter == moebler.gsx$kategori.$t) {
                     let klon = template.cloneNode(true).content;
-                    klon.querySelector("h2").textContent = moebler.gsx$navn.$t;
-                    klon.querySelector(".pris").textContent = `Pris: ${moebler.gsx$pris.$t}kr.`;
-                    klon.querySelector(".producent").textContent = moebler.gsx$producent.$t;
-                    klon.querySelector(".designer").textContent = moebler.gsx$designer.$t;
-                    klon.querySelector(".beskrivelse").textContent = moebler.gsx$beskrivelse.$t;
-                    klon.querySelector("img").src = `imgs/${moebler.gsx$billede.$t}`;
+                    klon.querySelector(".navn").textContent = moebler.gsx$navn.$t;
+                    klon.querySelector(".pris").textContent = ` ${moebler.gsx$pris.$t} kr.`;
+                    klon.querySelector("img").src =
+                        moebler.gsx$billede.$t;
                     klon.querySelector(".moebler").addEventListener("click", () => {
-                        //visDetalje(menukort);
-                        console.log("test");
-                        location.href = "single.html" + moebler.gsx$id.$t;
+                        //visDetalje(moebler);
+                        console.log(moebler.gsx$id.$t);
+                        location.href = "single.html?id=" + moebler.gsx$id.$t;
                     });
                     container.appendChild(klon);
                 }
             });
         }
 
-        // funktion der filtrerer menukort (json)
+        // funktion der filtrerer indretning (json)
         function filtrerIndretning() {
-            filter = this.dataset.ret; // sæt variabel "filter" til aktuel værdi
+            filter = this.dataset.moebler; // sæt variabel "filter" til aktuel værdi
             document.querySelector(".valgt").classList.remove("valgt"); // fjern klassen valgt fra aktuel knap
             this.classList.add("valgt") // marker den nyvalgte knap
             document.querySelector("h2").textContent = this.textContent;
             visIndretning(); // kald funktionen vis igen med nyt filter
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
