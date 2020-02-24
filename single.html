@@ -10,27 +10,70 @@
     <style>
         body {
             background-color: white;
-            font-family: "Realist thin";
+            font-family: 'Raleway', sans-serif;
 
         }
 
-        h2 {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+        /*     h2 {
             flex-direction: row;
-            text-align: center;
+                        text-align: center;
             padding: 0.5rem 0.5rem 0.5rem;
-        }
+        }*/
 
         #moebler {
             margin: 0 auto;
             padding: 2em;
             background-color: white;
             cursor: pointer;
-            width: 50vw;
-            border: 1px solid black;
+            width: 80vw;
         }
 
-        img {
-            width: 100%;
+
+        h2 {
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+
+        .pris {
+            font-weight: 500;
+            font-size: 1.2rem;
+            word-spacing: 240px;
+
+
+        }
+
+
+
+        @media only screen and (min-width: 800px) {
+            .pris {
+                word-spacing: 350px;
+
+            }
+
+            #container,
+            .sub_container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+
+        }
+
+        #kurv button {
+            font-family: 'Raleway', sans-serif;
+            width: 300px;
+            height: 40px;
+            background: #EBE5DB;
+            font-size: 1.2rem;
+            font-weight: 600;
+
         }
 
     </style>
@@ -40,15 +83,37 @@
     <section id="detalje">
         <button id="luk">back</button>
         <article id="moebler">
-            <h2></h2>
-            <img src="" alt="">
-            <p class="id"></p>
-            <p class="kategori"></p>
-            <p class="navn"></p>
-            <p class="pris"></p>
-            <p class="producent"></p>
-            <p class="designer"></p>
-            <p class="beskrivelse"></p>
+            <div id="container">
+
+                <img class="produktimg" src="" alt="">
+                <section>
+
+                    <h2></h2>
+                    <p class="beskrivelse"></p>
+                    <p class="kategori"></p>
+                    <p class="navn"></p>
+                    <p class="pris"></p>
+                    <p class="producent"></p>
+
+                    <div id="kurv"> <button>Læg i Kurv</button></div>
+                </section>
+
+            </div>
+            <section class="sub_container">
+
+                <img class="udforskbillede2" src="" alt="">
+                <img class="udforskbillede3" src="" alt="">
+                <img class="udforskbillede1" src="" alt="">
+            </section>
+            <div id="container">
+                <img class="designer" src="" alt="">
+
+                <section>
+                    <p class="designeren"></p>
+                    <p class="moed"></p>
+                </section>
+
+            </div>
         </article>
     </section>
 
@@ -85,13 +150,19 @@
             moebler.feed.entry.forEach(moebel => {
                 if (moebel.gsx$id.$t == moebelId) {
                     detalje.querySelector("h2").textContent = moebel.gsx$navn.$t;
-                    detalje.querySelector(".kategori").textContent = moebel.gsx$kategori.$t;
+                    detalje.querySelector(".produktimg").src = moebel.gsx$billede.$t;
+                    /*  detalje.querySelector(".kategori").textContent = moebel.gsx$kategori.$t;*/
                     detalje.querySelector(".pris").textContent = `Pris: ${moebel.gsx$pris.$t},-`;
-                    detalje.querySelector(".producent").textContent = moebel.gsx$producent.$t;
-                    detalje.querySelector(".designer").textContent = moebel.gsx$designer.$t;
+                    /* detalje.querySelector(".producent").textContent = moebel.gsx$producent.$t;*/
+
                     detalje.querySelector(".beskrivelse").textContent = moebel.gsx$beskrivelse.$t;
 
-                    detalje.querySelector("img").src = moebel.gsx$billede.$t;
+                    detalje.querySelector(".udforskbillede1").src = moebel.gsx$udforsk1.$t;
+                    detalje.querySelector(".udforskbillede2").src = moebel.gsx$udforsk2.$t;
+                    detalje.querySelector(".udforskbillede3").src = moebel.gsx$udforsk3.$t;
+                    detalje.querySelector(".designer").src = moebel.gsx$designerimg.$t;
+                    detalje.querySelector(".designeren").textContent = moebel.gsx$designer.$t;
+                    detalje.querySelector(".moed").textContent = moebel.gsx$moed.$t;
                 }
             });
 

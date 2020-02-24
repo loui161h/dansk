@@ -10,6 +10,36 @@
 </head>
 
 <style>
+    /* GENERELT */
+    body {
+        margin: 0;
+        width: 100%;
+
+    }
+
+
+    img {
+        width: 80%;
+    }
+
+    /* GENERELT */
+
+    /* HEADER */
+
+    header {
+        background-image: url(forsidebilleder/mobil.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh;
+        width: 100vw;
+    }
+
+    header h1 {
+        padding-top: 250px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
     span {
         display: inline-block;
         margin: 1rem 2rem;
@@ -73,36 +103,129 @@
         cursor: pointer;
     }
 
+    .sidenav img {
+        display: inline-block;
+        width: 175px;
+        height: 67px;
+        align-items: flex-start;
+        top: 20px;
+        margin-left: 80px;
+        position: fixed;
+    }
+
     /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
     #main {
         transition: margin-left .5s;
         padding: 20px;
     }
 
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
-        }
 
-        .sidenav a {
-            font-size: 18px;
-        }
+    .logo img {
+        width: 175px;
+        height: 67px;
+        align-items: flex-start;
+        top: 20px;
+        margin-left: 80px;
+        position: absolute;
     }
 
-    body {
-        margin: 0;
-        background-image: url(forsidebilleder/svanen.jpg);
-        width: 100%;
-        background-size: cover;
-        opacity: 50%;
-        height: 80vh;
+
+
+    .ikoner img {
+        display: inline-block;
+        justify-content: flex-end;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 78vw;
+        top: vw;
+        padding: 4px;
     }
 
+    /* HEADER */
+
+
+    /* FOOTER MOBILE */
+
+    .socialemedier img {
+        display: inline-block;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+    }
+
+
+    footer {
+        background-color: #F4F1ED;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Avenir;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 0.7rem;
+    }
+
+    footer p {
+        line-height: 22px;
+        word-spacing: 12px;
+    }
+
+    footer p a:hover {
+        color: #cbad99;
+    }
+
+
+    /* FOOTER MOBILE */
+
+
+    /* TEKST */
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-top: 16px;
+        margin-bottom: 10px;
+
+    }
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: Avenir;
+        line-height: 22px;
+        display: inline-block;
+
+    }
+
+
+    .border {
+        border: solid 0.5px black;
+        width: 30%;
+        margin: 40px 180px;
+        margin-top: 40px;
+    }
+
+    /* TEKST */
+
+
+
+    /* GRID */
     .menu {
         text-align: center;
-        padding: 16px;
-        margin-top: 0vw;
+        padding: 2px;
+        margin-top: 20px;
     }
 
 
@@ -125,20 +248,6 @@
     }
 
 
-    img {
-        width: 80%;
-    }
-
-
-
-    .logo img {
-        width: 175px;
-        height: 67px;
-        align-items: flex-start;
-        top: 20px;
-        margin-left: 80px;
-        position: absolute;
-    }
 
     .data-container {
         display: grid;
@@ -148,69 +257,35 @@
         grid-gap: 10px;
     }
 
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin-top: 16px;
-        margin-bottom: 10px;
+    /* GRID */
 
+    /* MEDIA QUERIES */
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
     }
 
-    h2 {
-        font-family: 'Raleway', sans-serif;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-family: Avenir;
-        line-height: 22px;
-    }
-
-
-
-
-    .border {
-        border: solid 0.5px black;
-        width: 30%;
-        margin: 40px 180px;
-        margin-top: 40px;
-    }
-
-    .sidenav img {
-        display: inline-block;
-        width: 175px;
-        height: 67px;
-        align-items: flex-start;
-        top: 20px;
-        margin-left: 80px;
-        position: fixed;
-    }
-
-    span {
-        display: inline-block;
-        margin: 1rem 2rem;
-        font-size: 2.5rem;
-        cursor: pointer;
-        position: fixed;
-    }
-
-    span a:hover {
-        color: #cbad99;
-    }
-
-    h1 {
-        padding-top: 250px;
-    }
-
-
-
+    /* MEDIA QUERIES */
 
     @media only screen and (min-width: 800px) {
+        header {
+            background-image: url(forsidebilleder/sortiment_web.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 80vh;
+            width: 100vw;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
 
         .ikoner img {
             display: inline-block;
@@ -222,6 +297,7 @@
             padding: 4px;
         }
 
+        /* FOOTER */
 
         .socialemedier img {
             display: inline-block;
@@ -251,6 +327,8 @@
         }
 
     }
+
+    /* FOOTER */
 </style>
 
 
@@ -259,8 +337,8 @@
 
     <header>
 
-
         <nav>
+
             <div class="container">
                 <span onclick="openNav()">+</span>
 
@@ -285,7 +363,7 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <img src="forsidebilleder/logo.png">
-                <a href="sortiment.html">Sortiment</a><br>
+                <a href="dansk.html">Forside</a><br>
                 <a href="#">Kundeservice</a>
                 <a href="#">Nyhedsbrev</a>
                 <a href="#">Om Dansk</a>
@@ -294,12 +372,13 @@
             <!-- Use any element to open the sidenav -->
 
 
+
             <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
         </nav>
 
-    </header>
+        <h1>Sortiment</h1>
 
-    <h1>Sortiment</h1>
+    </header>
 
 
 
