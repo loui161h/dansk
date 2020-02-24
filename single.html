@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singleview</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        body {
+            background-color: white;
+            font-family: "Realist thin";
+
+        }
+
+        h2 {
+            flex-direction: row;
+            text-align: center;
+            padding: 0.5rem 0.5rem 0.5rem;
+        }
+
+        #moebler {
+            margin: 0 auto;
+            padding: 2em;
+            background-color: white;
+            cursor: pointer;
+            width: 50vw;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="detalje">
+        <button id="luk">back</button>
+        <article id="moebler">
+            <h2></h2>
+            <img src="" alt="">
+            <p class="id"></p>
+            <p class="kategori"></p>
+            <p class="navn"></p>
+            <p class="pris"></p>
+            <p class="producent"></p>
+            <p class="designer"></p>
+            <p class="beskrivelse"></p>
+        </article>
+    </section>
+
+    <script>
+        const Urlparameter = new URLSearchParams(window.location.search);
+
+        const moebelId = Urlparameter.get("id");
+        console.log(moebelId);
+
+        let moebler = [];
+        const endpoint = "https://spreadsheets.google.com/feeds/list/1SKyMmjjoEo0bBPLSaxw6xo-L9joE2kpNMkeeTCqwq4A/od6/public/values?alt=json";
+
+        document.addEventListener("DOMContentLoaded", hentData);
+
+        function start() {
+            hentData();
+            addEventListenersToButtons();
+        }
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            console.log(response);
+            moebler = await response.json();
+
+            visMoebel();
+
+        }
+
+        function visMoebel() {
+            detalje.querySelector("button").addEventListener("click", () => {
+                history.back();
+            })
+            console.log(moebler);
+            moebler.feed.entry.forEach(moebel => {
+                if (moebel.gsx$id.$t == moebelId) {
+                    detalje.querySelector("h2").textContent = moebel.gsx$navn.$t;
+                    detalje.querySelector(".kategori").textContent = moebel.gsx$kategori.$t;
+                    detalje.querySelector(".pris").textContent = `Pris: ${moebel.gsx$pris.$t},-`;
+                    detalje.querySelector(".producent").textContent = moebel.gsx$producent.$t;
+                    detalje.querySelector(".designer").textContent = moebel.gsx$designer.$t;
+                    detalje.querySelector(".beskrivelse").textContent = moebel.gsx$beskrivelse.$t;
+
+                    detalje.querySelector("img").src = moebel.gsx$billede.$t;
+                }
+            });
+
+        }
+
+    </script>
+</body>
+
+</html>
