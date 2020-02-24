@@ -22,23 +22,9 @@
         width: 80%;
     }
 
-    /* GENERELT */
+    /* GENERELT SLUT */
 
-    /* HEADER */
-
-    header {
-        background-image: url(forsidebilleder/mobil.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 80vh;
-        width: 100vw;
-    }
-
-    header h1 {
-        padding-top: 250px;
-        font-size: 2rem;
-        font-weight: 400;
-    }
+    /* SIDE NAVIGATION */
 
     span {
         display: inline-block;
@@ -120,6 +106,25 @@
     }
 
 
+    /* SIDE NAVIGATION SLUT */
+
+    /* HEADER */
+
+    header {
+        background-image: url(forsidebilleder/mobil.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh;
+        width: 100vw;
+    }
+
+    header h1 {
+        padding-top: 250px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+
     .logo img {
         width: 175px;
         height: 67px;
@@ -127,6 +132,10 @@
         top: 20px;
         margin-left: 80px;
         position: absolute;
+    }
+
+    .container {
+        display: inline-block;
     }
 
 
@@ -138,14 +147,14 @@
         height: 30px;
         position: relative;
         left: 78vw;
-        top: vw;
+        top: 4vw;
         padding: 4px;
     }
 
-    /* HEADER */
+    /* HEADER SLUT */
 
 
-    /* FOOTER MOBILE */
+    /* FOOTER */
 
     .socialemedier img {
         display: inline-block;
@@ -179,10 +188,10 @@
     }
 
 
-    /* FOOTER MOBILE */
+    /* FOOTER SLUT */
 
 
-    /* TEKST */
+    /* GENERELLE TEKST */
 
     h1 {
         font-size: 2rem;
@@ -217,8 +226,7 @@
         margin-top: 40px;
     }
 
-    /* TEKST */
-
+    /* GENERELLE TEKST SLUT */
 
 
     /* GRID */
@@ -246,7 +254,6 @@
         background-color: transparent;
         text-transform: uppercase;
     }
-
 
 
     .data-container {
@@ -280,6 +287,15 @@
             background-repeat: no-repeat;
             height: 80vh;
             width: 100vw;
+        }
+
+        .logo img {
+            width: 175px;
+            height: 67px;
+            align-items: flex-start;
+            top: 20px;
+            margin-left: 80px;
+            position: absolute;
         }
 
         header h1 {
@@ -328,7 +344,9 @@
 
     }
 
-    /* FOOTER */
+    /* FOOTER SLUT */
+
+    /* MEDIA QUERIES SLUT */
 </style>
 
 
@@ -342,11 +360,11 @@
             <div class="container">
                 <span onclick="openNav()">+</span>
 
-                <!--
-                <div class="logo">
-                    <img src="forsidebilleder/logo.png">
-                </div>
--->
+                <a href="dansk.html">
+                    <div class="logo">
+                        <img src="forsidebilleder/logo.png">
+                    </div>
+                </a>
 
                 <!--<div class="sidebar">
                     <p>est. denmark 2020</p>
@@ -362,7 +380,7 @@
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <img src="forsidebilleder/logo.png">
+                <!-- <img src="forsidebilleder/logo.png">-->
                 <a href="dansk.html">Forside</a><br>
                 <a href="#">Kundeservice</a>
                 <a href="#">Nyhedsbrev</a>

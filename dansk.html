@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favicon.png">
 
     <style>
+        /* GENERELLE INDSTILLINGER */
         body {
             margin: 0;
             background-image: url(forsidebilleder/interor.jpeg);
@@ -23,15 +24,22 @@
             }
         }
 
+        img {
+            width: 100%;
+        }
 
 
+        /* GENERELLE INDSTILLINGER SLUT*/
+
+
+        /* SIDE NAVIGATION */
         /* The side navigation menu */
         span {
             display: inline-block;
             margin: 1rem 2rem;
             font-size: 2.5rem;
             cursor: pointer;
-            position: fixed;
+            position: absolute;
         }
 
         span a:hover {
@@ -95,6 +103,8 @@
             padding: 20px;
         }
 
+
+        /* SIDE NAVIGATION */
         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
         @media screen and (max-height: 450px) {
             .sidenav {
@@ -109,11 +119,17 @@
         /* Menu slut */
 
 
+        /* MOBILE FIRST */
 
-        /*Mobil version */
-
-        img {
-            width: 100%;
+        /* HEADER */
+        .sidenav img {
+            display: inline-block;
+            width: 175px;
+            height: 67px;
+            align-items: flex-start;
+            top: 20px;
+            margin-left: 80px;
+            position: fixed;
         }
 
         .logo img {
@@ -122,8 +138,30 @@
             align-items: flex-start;
             top: 20px;
             margin-left: 80px;
-            position: fixed;
+            position: absolute;
         }
+
+        .container {
+            display: inline-block;
+        }
+
+
+
+        .ikoner img {
+            display: inline-block;
+            justify-content: flex-end;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            left: 78vw;
+            top: 4vw;
+            padding: 4px;
+        }
+
+        /* HEADER SLUT */
+
+
+        /* GENEREL TEKST */
 
         h1 {
             font-family: 'Raleway', sans-serif;
@@ -146,6 +184,7 @@
             font-weight: 100;
         }
 
+        /* GENEREL TEKST SLUT */
 
 
         /* .sidebar {
@@ -162,7 +201,7 @@
 
         }*/
 
-
+        /* FOOTER */
         footer {
             background-color: #F4F1ED;
             text-align: center;
@@ -185,19 +224,20 @@
             color: #cbad99;
         }
 
-        .container {
+
+        .socialemedier img {
             display: inline-block;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            padding: 6px;
         }
 
-        .sidenav img {
-            display: inline-block;
-            width: 175px;
-            height: 67px;
-            align-items: flex-start;
-            top: 20px;
-            margin-left: 80px;
-            position: fixed;
-        }
+
+        /* FOOTER SLUT */
+
+
+        /* UDFORSK */
 
         .pk22 img {
             width: 80%;
@@ -215,8 +255,14 @@
         .pk22 h3 {
             font-family: Avenir;
             font-size: 1.1rem;
+            margin-top: 0px;
             padding-left: 100px;
         }
+
+        */
+        /* UDFORSK SLUT */
+
+
 
 
         /*    .box1 {
@@ -225,25 +271,6 @@
             background-color: #DCCEC1;
         }*/
 
-        .ikoner img {
-            display: inline-block;
-            justify-content: flex-end;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            left: 78vw;
-            top: 4vw;
-            padding: 4px;
-        }
-
-
-        .socialemedier img {
-            display: inline-block;
-            align-items: center;
-            width: 30px;
-            height: 30px;
-            padding: 6px;
-        }
 
 
         .border {
@@ -253,6 +280,8 @@
             margin-top: 40px;
         }
 
+
+        /* OPDAGELSE */
         .section2 {
             display: flex;
             flex-wrap: wrap;
@@ -280,12 +309,10 @@
             text-transform: none;
         }
 
-        .pk22 h3 {
-            font-family: Avenir;
-            font-size: 1.1rem;
-            /*       margin-top: 0px;*/
-            padding-left: 100px;
-        }
+        /* OPDAGELSE SLUT */
+
+
+        /* CITAT */
 
         .citat {
             background-color: #EBE5DB;
@@ -294,11 +321,13 @@
             text-align: center;
             font-family: Avenir;
             font-size: 1.2rem;
-            text-transform: uppercase;
             font-style: italic;
         }
 
+        /* CITAT SLUT */
 
+
+        /* KONTAKT  */
         .kontakt {
             margin: 50px;
             padding: 40px;
@@ -308,18 +337,19 @@
 
         .kontakt p {
             font-family: Avenir;
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             font-weight: 100;
         }
 
 
+        /* KONTAKT SLUT */
 
 
 
 
 
 
-
+        /* MEDIA QUERIES */
 
         @media only screen and (min-width: 800px) {
             body {
@@ -341,15 +371,6 @@
                 padding: 4px;
             }
 
-
-            .socialemedier img {
-                display: inline-block;
-                align-items: center;
-                width: 35px;
-                height: 35px;
-                word-spacing: 18px;
-            }
-
             .tekst h2 {
                 padding: 100px;
                 margin: 135px;
@@ -359,28 +380,11 @@
                 font-style: italic;
             }
 
-            footer {
-                background-color: #F4F1ED;
-                text-align: center;
-                text-transform: uppercase;
-                font-family: Avenir;
-                padding: 40px;
-                position: relative;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                font-size: 1rem;
-            }
-
-            footer p {
-                line-height: 37px;
-                word-spacing: 12px;
-            }
 
             .border {
                 border: solid 0.5px black;
                 width: 20%;
-                margin: 40px 520px;
+                margin: 40px 560px;
                 margin-top: 40px;
             }
 
@@ -389,10 +393,10 @@
                 flex-wrap: wrap;
             }
 
-            .section2 {
+            /* .section2 {
                 display: flex;
                 flex-wrap: wrap;
-            }
+            }*/
 
             .section2 h3 {
                 font-size: 1.5rem;
@@ -468,7 +472,6 @@
                 text-align: center;
                 font-family: Avenir;
                 font-size: 2.3rem;
-                text-transform: uppercase;
                 font-style: italic;
             }
 
@@ -476,13 +479,42 @@
                 margin: 20px 135px;
                 text-align: center;
                 line-height: 45px;
-                font-size: 2.2rem;
+                font-size: 1.5rem;
             }
 
             .kontakt h2 {
                 text-align: center;
                 line-height: 45px;
-                font-size: 2.4rem;
+                font-size: 2rem;
+                margin-bottom: 10vw;
+            }
+
+
+            .socialemedier img {
+                display: inline-block;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                word-spacing: 18px;
+            }
+
+
+            footer {
+                background-color: #F4F1ED;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: Avenir;
+                padding: 40px;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 1rem;
+            }
+
+            footer p {
+                line-height: 37px;
+                word-spacing: 12px;
             }
 
             footer {
@@ -490,6 +522,8 @@
             }
         }
 
+
+        /* MEDIA QUERIES SLUT */
     </style>
 
 </head>
@@ -523,7 +557,7 @@
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <img src="forsidebilleder/logo.png">
+                <!-- <img class="logo" src="forsidebilleder/logo.png">-->
                 <a href="sortiment.html">Sortiment</a><br>
 
                 <a href="#">Kundeservice</a>
@@ -544,7 +578,7 @@
     </header>
 
     <div class="tekst">
-        <h2>Skab et personligt hjem, som afspejler dig og din hverdag. Kombinér lækre designmøbler med arvemøbler og loppefund – det giver hjemmet personlighed og en historie.</h2>
+        <h2>"Skab et personligt hjem, som afspejler dig og din hverdag. Kombinér lækre designmøbler med arvemøbler og loppefund – det giver hjemmet personlighed og en historie."</h2>
     </div>
 
 
@@ -610,7 +644,6 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
-
     </script>
 
 
@@ -624,6 +657,4 @@
         <img src="ui/ig.svg">
     </div>
 
-</footer>
-
-</html>
+</footer></html>
