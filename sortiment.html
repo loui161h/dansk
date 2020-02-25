@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dansk</title>
+    <title>dansk.</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Poppins:700|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +19,7 @@
 
 
     img {
-        width: 80%;
+        width: 100%;
     }
 
     /* GENERELT SLUT */
@@ -267,8 +267,15 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 1000px;
-        margin: 0 auto;
-        grid-gap: 10px;
+        margin: auto;
+        grid-gap: 50px;
+    }
+
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
     }
 
     /* GRID */
@@ -375,6 +382,8 @@
             word-spacing: 12px;
         }
 
+
+
     }
 
     /* FOOTER SLUT */
@@ -451,8 +460,10 @@
     <template>
         <article class="moebler">
             <img src="" alt="">
-            <p class="navn"></p>
-            <p class="pris"></p>
+            <section class="info">
+                <p class="navn"></p>
+                <p class="pris"></p>
+            </section>
         </article>
     </template>
 
