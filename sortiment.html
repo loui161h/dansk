@@ -31,7 +31,7 @@
         margin: 1rem 2rem;
         font-size: 2.5rem;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
     }
 
     span a:hover {
@@ -62,7 +62,7 @@
 
     /* The navigation menu links */
     .sidenav a {
-        padding: 10px 8px 8px 100px;
+        padding: 10px 8px 8px 88px;
         text-decoration: none;
         font-size: 18px;
         color: #000000;
@@ -85,19 +85,24 @@
         left: -100px;
         font-size: 2.5rem;
         display: inline-block;
-        margin: 1rem 2rem;
+        margin: 1rem 2.5rem;
         cursor: pointer;
     }
 
+
     .sidenav img {
-        display: inline-block;
-        width: 175px;
-        height: 67px;
-        align-items: flex-start;
-        top: 20px;
-        margin-left: 80px;
-        position: fixed;
+        /* display: inline-block;*/
+        width: 140px;
+        height: 54.4px;
+
+
+        /*    align-items: flex-start;*/
+        top: 28px;
+        margin-left: 70px;
+        position: absolute;
     }
+
+
 
     /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
     #main {
@@ -119,18 +124,17 @@
     }
 
     header h1 {
-        padding-top: 250px;
+        padding-top: 210px;
         font-size: 2rem;
         font-weight: 400;
     }
 
 
     .logo img {
-        width: 175px;
-        height: 67px;
-        align-items: flex-start;
-        top: 20px;
-        margin-left: 80px;
+        width: 140px;
+        height: 54.4px;
+        top: 28px;
+        margin-left: 70px;
         position: absolute;
     }
 
@@ -143,13 +147,14 @@
     .ikoner img {
         display: inline-block;
         justify-content: flex-end;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         position: relative;
         left: 78vw;
         top: 4vw;
         padding: 4px;
     }
+
 
     /* HEADER SLUT */
 
@@ -176,6 +181,7 @@
         left: 0;
         right: 0;
         font-size: 0.7rem;
+        margin-top: 50px;
     }
 
     footer p {
@@ -209,6 +215,7 @@
         font-weight: 300;
         text-align: center;
         text-transform: uppercase;
+        margin-bottom: 0px;
     }
 
     p {
@@ -246,8 +253,8 @@
     }
 
     button {
-        font-size: 1rem;
-        padding: 18px;
+        font-size: 0.9rem;
+        padding: 9px;
         font-family: "Raleway";
         border: none;
         cursor: pointer;
@@ -281,6 +288,11 @@
     /* MEDIA QUERIES */
 
     @media only screen and (min-width: 800px) {
+        .sidenav img {
+            width: 175px;
+            height: 67px;
+        }
+
         header {
             background-image: url(forsidebilleder/sortiment_web.jpg);
             background-size: cover;
@@ -292,14 +304,34 @@
         .logo img {
             width: 175px;
             height: 67px;
-            align-items: flex-start;
             top: 20px;
-            margin-left: 80px;
-            position: absolute;
+        }
+
+        .sidenav img {
+            width: 175px;
+            height: 67px;
+            top: 20px;
         }
 
         header h1 {
             font-size: 3rem;
+            margin-top: -22px;
+        }
+
+
+        button {
+            font-size: 1.2rem;
+            padding: 15px;
+            font-family: "Raleway";
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 60px;
         }
 
 
@@ -335,6 +367,7 @@
             left: 0;
             right: 0;
             font-size: 1rem;
+            margin-top: 100px;
         }
 
         footer p {
@@ -380,7 +413,7 @@
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <!-- <img src="forsidebilleder/logo.png">-->
+                <img src="forsidebilleder/logo.png">
                 <a href="dansk.html">Forside</a><br>
                 <a href="#">Kundeservice</a>
                 <a href="#">Nyhedsbrev</a>
