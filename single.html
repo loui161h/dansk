@@ -81,6 +81,47 @@
 
         /* TEKST */
 
+
+
+        h1 {
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: 0;
+            font-size: 2rem;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-weight: 200;
+
+        }
+
+
+        /* .oplysninger p {
+            border-bottom: solid 0.5px black;
+            width: 100%;
+            margin: 40px 0px;
+            margin-top: 40px;
+
+
+        }*/
+
+        .bordertop {
+            border: solid 0.5px black;
+            width: 80%;
+            margin-left: 50px;
+            display: inline-block;
+        }
+
+        .oplysninger p {
+            margin-left: 50px;
+            justify-content: space-between;
+            word-spacing: 250px;
+            font-size: 1.2rem;
+
+        }
+
+
+
         h2 {
             font-weight: 300;
             text-transform: uppercase;
@@ -94,6 +135,42 @@
         }
 
         /* TEKST SLUT */
+
+        /* FOOTER */
+
+        .socialemedier img {
+            display: inline-block;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            padding: 6px;
+        }
+
+
+        footer {
+            background-color: #F4F1ED;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Avenir;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 0.7rem;
+            margin-top: 50px;
+        }
+
+        footer p {
+            line-height: 22px;
+            word-spacing: 12px;
+        }
+
+        footer p a:hover {
+            color: #cbad99;
+        }
+
+        /* FOOTER SLUT */
 
 
         /* MEDIA QUERIES */
@@ -125,18 +202,77 @@
 
             }
 
+            .bordertop {
+                border: solid 0.5px black;
+                width: 70%;
+                margin-left: 235px;
+                display: inline-block;
+            }
+
+            .oplysninger p {
+                margin-left: 235px;
+                justify-content: space-between;
+                word-spacing: 860px;
+                font-size: 1.2rem;
+
+            }
+
+            h1 {
+                width: 100%;
+                margin-top: 100px;
+                margin-bottom: 10px;
+                font-size: 2rem;
+                text-align: center;
+                font-family: 'Raleway', sans-serif;
+                text-transform: uppercase;
+                font-weight: 200;
+
+            }
+
+
+
+            .socialemedier img {
+                display: inline-block;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                word-spacing: 20px;
+            }
+
+
+            footer {
+                background-color: #F4F1ED;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: Avenir;
+                padding: 40px;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 1rem;
+                margin-top: 100px;
+            }
+
+            footer p {
+                line-height: 37px;
+                word-spacing: 12px;
+            }
+
+
+            /* MEDIA QUERIES SLUT */
+
+            .border {
+                border-bottom: solid 0.5px black;
+                width: 30%;
+                margin: 40px 180px;
+                margin-top: 40px;
+            }
+
         }
 
-
-        /* MEDIA QUERIES SLUT */
-
-        .border {
-            border: solid 0.5px black;
-            width: 30%;
-            margin: 40px 180px;
-            margin-top: 40px;
-        }
     </style>
+
 </head>
 
 <body>
@@ -158,12 +294,40 @@
                     <p class="producent"></p>
 
                     <div id="kurv"> <button>Læg i Kurv</button></div>
+
                 </section>
 
+
             </div>
+            <h1>Produktoplysninger</h1>
+            <div class="bordertop"></div>
+            <section class="oplysninger">
+
+                <p>Oplysninger +</p>
 
 
-            <div class="border"></div>
+                <div class="bordertop"></div>
+                <p>Refundering +</p>
+
+
+                <div class="bordertop"></div>
+            </section>
+
+
+
+            <section class="udforsk">
+
+                <h1>Udforsk og kombiner</h1>
+            </section>
+
+
+
+
+            <br>
+            <br>
+            <br>
+
+
 
             <section class="sub_container">
 
@@ -182,6 +346,15 @@
             </div>
         </article>
     </section>
+
+    <footer>
+        <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+        <div class="socialemedier">
+            <img src="ui/fb.svg">
+            <img src="ui/ig.svg">
+        </div>
+    </footer>
+
 
     <script>
         const Urlparameter = new URLSearchParams(window.location.search);
@@ -233,5 +406,8 @@
             });
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
