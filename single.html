@@ -1,154 +1,406 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singleview</title>
-    <link rel="stylesheet" href="">
+    <title>dansk.</title>
+    <!--    <link rel="stylesheet" href="">-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favicon.png">
+</head>
+<style>
+    /* GENERELLE INDSTILLINGER */
+    body {
+        background-color: white;
+        font-family: 'Raleway', sans-serif;
 
-    <style>
-        /* GENERELLE INDSTILLINGER */
-        body {
-            background-color: white;
-            font-family: 'Raleway', sans-serif;
+    }
 
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    /* SIDE NAVIGATION */
+    /* The side navigation menu */
+    span {
+        display: inline-block;
+        margin: 1rem 2rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    span a:hover {
+        color: #cbad99;
+    }
+
+
+    span:hover {
+        opacity: 50%;
+    }
+
+    .sidenav {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        left: 0;
+        background-color: #ffffff;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 120px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 10px 8px 8px 88px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #000000;
+        display: block;
+        transition: 0.3s;
+        font-family: Avenir;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #cbad99;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        font-size: 2.5rem;
+        display: inline-block;
+        margin: 1rem 2.5rem;
+        cursor: pointer;
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+
+    /* SIDE NAVIGATION */
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
         }
 
-        img {
-            width: 100%;
-            object-fit: cover;
+        .sidenav a {
+            font-size: 18px;
         }
+    }
+
+    /* Menu slut */
 
 
-        /*     h2 {
-            flex-direction: row;
-                        text-align: center;
-            padding: 0.5rem 0.5rem 0.5rem;
-        }*/
+    /* MOBILE FIRST */
 
-        /* GENERELLE INDSTILLINGER SLUT */
-
-        /* GRID */
-
-        #SINGLE VIEW {
-            margin: 0 auto;
-            padding: 2em;
-            background-color: white;
-            cursor: pointer;
-            width: 80vw;
-        }
+    /* HEADER */
+    .sidenav img {
+        /* display: inline-block;*/
+        width: 140px;
+        height: 54.4px;
 
 
-        #container,
+        /*    align-items: flex-start;*/
+        top: 28px;
+        margin-left: 70px;
+        position: absolute;
+    }
+
+    .logo img {
+        width: 140px;
+        height: 54.4px;
+        top: 28px;
+        margin-left: 70px;
+        position: absolute;
+    }
+
+    .logo img:hover {
+        opacity: 50%;
+    }
+
+    .container {
+        display: inline-block;
+    }
+
+
+
+    .ikoner img {
+        display: inline-block;
+        justify-content: flex-end;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        left: 78vw;
+        top: 4vw;
+        padding: 4px;
+    }
+
+    .ikoner img:hover {
+        opacity: 50%;
+    }
+
+    /* HEADER SLUT */
+
+    /* GENERELLE INDSTILLINGER SLUT */
+
+    /* GRID */
+
+    #SINGLE VIEW {
+        margin: 0 auto;
+        padding: 2em;
+        background-color: white;
+        cursor: pointer;
+        width: 80vw;
+    }
+
+
+    #container,
+    .sub_container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 25px;
+        line-height: 25px;
+    }
+
+    /* GRID SLUT */
+
+    /* BUTTONS */
+
+    button {
+        font-family: 'Raleway', sans-serif;
+        width: 100px;
+        height: 40px;
+        background: #EBE5DB;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin: 10px;
+
+    }
+
+    #kurv button {
+        font-family: 'Raleway', sans-serif;
+        width: 400px;
+        height: 50px;
+        background: #EBE5DB;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 10vw;
+        margin-left: 15px;
+    }
+
+    button:hover {
+        opacity: 50%;
+    }
+
+
+    /* BUTTONS SLUT */
+
+    /* TEKST */
+
+    h1 {
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-weight: 200;
+
+    }
+
+
+    .bordertop {
+        border: solid 0.5px black;
+        width: 80%;
+        margin-left: 50px;
+        display: inline-block;
+    }
+
+    .oplysninger p {
+        margin-left: 50px;
+        justify-content: space-between;
+        word-spacing: 250px;
+        font-size: 1.2rem;
+
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    p {
+        line-height: 1.6rem;
+    }
+
+    .pris {
+        font-weight: 600;
+        font-size: 1.2rem;
+        /*         text-align: end;*/
+
+    }
+
+    .designeren {
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .moed {
+        width: 450px;
+    }
+
+    /* TEKST SLUT */
+
+    /* FOOTER */
+
+    .socialemedier img {
+        display: inline-block;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+    }
+
+
+    footer {
+        background-color: #F4F1ED;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Avenir;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 0.7rem;
+        margin-top: 50px;
+    }
+
+    footer p {
+        line-height: 22px;
+        word-spacing: 12px;
+    }
+
+    footer p a:hover {
+        color: #cbad99;
+    }
+
+
+    footer a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    /* FOOTER SLUT */
+
+
+    /* MEDIA QUERIES */
+
+
+    @media only screen and (min-width: 1100px) {
+
+
         .sub_container {
-            margin-left: 20px;
-            margin-right: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            margin-left: 120px;
+            margin-right: 120px;
             margin-top: 25px;
-            line-height: 25px;
+            padding-left: 80px;
+            padding-right: 80px;
         }
 
-        /* GRID SLUT */
+        /*    .border {
+                border: solid 0.5px black;
+                width: 20%;
+                margin: 40px 560px;
+                margin-top: 40px;
 
-        /* BUTTONS */
-
-        button {
-            font-family: 'Raleway', sans-serif;
-            width: 100px;
-            height: 40px;
-            background: #EBE5DB;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            margin: 10px;
-
-        }
-
-        #kurv button {
-            font-family: 'Raleway', sans-serif;
-            width: 400px;
-            height: 50px;
-            background: #EBE5DB;
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 10vw;
-            margin-left: 15px;
-        }
-
-        button:hover {
-            opacity: 50%;
-        }
-
-
-        /* BUTTONS SLUT */
-
-        /* TEKST */
-
-        h1 {
-            margin-top: 100px;
-            margin-bottom: 0;
-            font-size: 1.5rem;
-            text-align: center;
-            font-family: 'Raleway', sans-serif;
-            text-transform: uppercase;
-            font-weight: 200;
-
-        }
-
+            }*/
 
         .bordertop {
             border: solid 0.5px black;
-            width: 80%;
-            margin-left: 50px;
+            width: 70%;
+            margin-left: 235px;
             display: inline-block;
         }
 
         .oplysninger p {
-            margin-left: 50px;
+            margin-left: 235px;
             justify-content: space-between;
-            word-spacing: 250px;
+            word-spacing: 860px;
             font-size: 1.2rem;
 
         }
 
+        h1 {
+            margin-top: 100px;
+            margin-bottom: 10px;
+            font-size: 2rem;
+
+        }
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            text-transform: uppercase;
+            font-size: 2rem;
         }
 
-        p {
-            line-height: 1.6rem;
+
+        .beskrivelse {
+            width: 420px;
         }
+
 
         .pris {
-            font-weight: 600;
+            word-spacing: 265px;
+
+        }
+
+        #kurv button {
+            width: 400px;
+            height: 50px;
             font-size: 1.2rem;
-            /*         text-align: end;*/
-
+            margin-left: 0;
         }
 
-        .designeren {
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .moed {
-            width: 450px;
-        }
-
-        /* TEKST SLUT */
 
         /* FOOTER */
 
         .socialemedier img {
             display: inline-block;
             align-items: center;
-            width: 30px;
-            height: 30px;
-            padding: 6px;
+            width: 35px;
+            height: 35px;
+            word-spacing: 20px;
         }
 
 
@@ -157,154 +409,106 @@
             text-align: center;
             text-transform: uppercase;
             font-family: Avenir;
-            padding: 20px;
+            padding: 40px;
             position: relative;
             bottom: 0;
             left: 0;
             right: 0;
-            font-size: 0.7rem;
-            margin-top: 50px;
+            font-size: 1rem;
+            margin-top: 100px;
         }
 
         footer p {
-            line-height: 22px;
+            line-height: 37px;
             word-spacing: 12px;
         }
 
-        footer p a:hover {
-            color: #cbad99;
-        }
-
-
-        footer a {
-            text-decoration: none;
-            color: black;
-        }
 
 
         /* FOOTER SLUT */
 
-
-        /* MEDIA QUERIES */
-
-
-        @media only screen and (min-width: 1100px) {
-
-            #container,
-            .sub_container {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 20px;
-                margin-left: 120px;
-                margin-right: 120px;
-                margin-top: 25px;
-                padding-left: 80px;
-                padding-right: 80px;
-            }
-
-            /*    .border {
-                border: solid 0.5px black;
-                width: 20%;
-                margin: 40px 560px;
-                margin-top: 40px;
-
-            }*/
-
-            .bordertop {
-                border: solid 0.5px black;
-                width: 70%;
-                margin-left: 235px;
-                display: inline-block;
-            }
-
-            .oplysninger p {
-                margin-left: 235px;
-                justify-content: space-between;
-                word-spacing: 860px;
-                font-size: 1.2rem;
-
-            }
-
-            h1 {
-                margin-top: 100px;
-                margin-bottom: 10px;
-                font-size: 2rem;
-
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-
-            .beskrivelse {
-                width: 420px;
-            }
-
-
-            .pris {
-                word-spacing: 265px;
-
-            }
-
-            #kurv button {
-                width: 400px;
-                height: 50px;
-                font-size: 1.2rem;
-                margin-left: 0;
-            }
-
-
-            /* FOOTER */
-
-            .socialemedier img {
-                display: inline-block;
-                align-items: center;
-                width: 35px;
-                height: 35px;
-                word-spacing: 20px;
-            }
-
-
-            footer {
-                background-color: #F4F1ED;
-                text-align: center;
-                text-transform: uppercase;
-                font-family: Avenir;
-                padding: 40px;
-                position: relative;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                font-size: 1rem;
-                margin-top: 100px;
-            }
-
-            footer p {
-                line-height: 37px;
-                word-spacing: 12px;
-            }
-
-
-            /* FOOTER SLUT */
-
-            /* MEDIA QUERIES SLUT */
-
+        .logo img {
+            width: 175px;
+            height: 67px;
+            top: 20px;
         }
 
-    </style>
+        .sidenav img {
+            width: 175px;
+            height: 67px;
+            top: 20px;
+        }
 
-</head>
+        .ikoner img {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            left: 92vw;
+            top: 2vw;
+            position: relative;
+            padding: 4px;
+        }
+    }
+
+    /* MEDIA QUERIES SLUT */
+</style>
+
+
 
 <body>
+    <header>
+
+        <nav>
+            <div class="container">
+                <span onclick="openNav()">+</span>
+
+                <a href="dansk.html">
+                    <div class="logo">
+                        <img src="forsidebilleder/logo.png" alt="dansklogo">
+                    </div>
+                </a>
+
+                <!--<div class="sidebar">
+                    <p>est. denmark 2020</p>
+                </div>-->
+            </div>
+
+            <div class="ikoner">
+                <img src="ui/soeg.svg" alt="soeg">
+                <img src="ui/kurv.svg" alt="kurv">
+            </div>
+
+
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <img class="logo" src="forsidebilleder/logo.png" alt="logo">
+                <a href="sortiment.html">Sortiment</a><br>
+
+                <a href="#">Kundeservice</a>
+                <a href="#">Nyhedsbrev</a>
+                <a href="#">Om Dansk</a>
+                <a href="#">Kontakt</a>
+            </div>
+
+
+            <!-- Use any element to open the sidenav -->
+
+
+            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+
+        </nav>
+
+    </header>
 
 
     <section id="detalje">
         <button id="tilbage">Tilbage</button>
         <article id="moebler">
-            <div id="container">
+            <div class="sub_container">
 
-                <img class="produktimg" src="" alt="">
+                <img class="produktimg" src="" alt="produktimg">
                 <section>
 
                     <h2></h2>
@@ -348,17 +552,17 @@
 
             <section class="sub_container">
 
-                <img class="udforskbillede2" src="" alt="">
-                <img class="udforskbillede3" src="" alt="">
-                <img class="udforskbillede1" src="" alt="">
+                <img class="udforskbillede2" src="" alt="udforsk1">
+                <img class="udforskbillede3" src="" alt="udforsk2">
+                <img class="udforskbillede1" src="" alt="udforsk3">
             </section>
 
 
             <h1>Mød designeren</h1>
             <br>
 
-            <div id="container">
-                <img class="designer" src="" alt="">
+            <div class="sub_container">
+                <img class="designer" src="" alt="designerimg">
 
                 <section>
                     <p class="designeren"></p>
@@ -374,8 +578,8 @@
     <footer>
         <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
         <div class="socialemedier">
-            <img src="ui/fb.svg">
-            <img src="ui/ig.svg">
+            <img src="ui/fb.svg" alt="fb">
+            <img src="ui/ig.svg" alt="ig">
         </div>
     </footer>
 
@@ -430,9 +634,16 @@
 
         }
 
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
     </script>
 
 
-</body>
-
-</html>
+</body></html>

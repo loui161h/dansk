@@ -5,383 +5,178 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dansk.</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Poppins:700|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
-</head>
+    <!--    <link rel="stylesheet" href="">-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favicon.png">
 
-<style>
-    /* GENERELT */
-    body {
-        margin: 0;
-        width: 100%;
+    <style>
+        /* GENERELT */
+        body {
+            margin: 0;
+            width: 100%;
 
-    }
+        }
 
 
-    img {
-        width: 100%;
-        cursor: pointer;
-    }
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
 
-    img:hover {
-        opacity: 50%;
-    }
+        img:hover {
+            opacity: 50%;
+        }
 
-    /* GENERELT SLUT */
+        /* GENERELT SLUT */
 
-    /* SIDE NAVIGATION */
+        /* SIDE NAVIGATION */
 
-    span {
-        display: inline-block;
-        margin: 1rem 2rem;
-        font-size: 2.5rem;
-        cursor: pointer;
-        position: absolute;
-    }
+        span {
+            display: inline-block;
+            margin: 1rem 2rem;
+            font-size: 2.5rem;
+            cursor: pointer;
+            position: absolute;
+        }
 
 
-    span:hover {
-        opacity: 50%;
-    }
+        span:hover {
+            opacity: 50%;
+        }
 
-    span a:hover {
-        color: #cbad99;
-    }
+        span a:hover {
+            color: #cbad99;
+        }
 
-    .sidenav {
-        height: 100%;
-        /* 100% Full-height */
-        width: 0;
-        /* 0 width - change this with JavaScript */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Stay on top */
-        top: 0;
-        /* Stay at the top */
-        left: 0;
-        background-color: #ffffff;
-        /* Black*/
-        overflow-x: hidden;
-        /* Disable horizontal scroll */
-        padding-top: 120px;
-        /* Place content 60px from the top */
-        transition: 0.5s;
-        /* 0.5 second transition effect to slide in the sidenav */
-    }
-
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 10px 8px 8px 88px;
-        text-decoration: none;
-        font-size: 18px;
-        color: #000000;
-        display: block;
-        transition: 0.3s;
-        font-family: Avenir;
-        font-weight: 100;
-        text-transform: uppercase;
-    }
-
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {
-        color: #cbad99;
-    }
-
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        left: -100px;
-        font-size: 2.5rem;
-        display: inline-block;
-        margin: 1rem 2.5rem;
-        cursor: pointer;
-    }
-
-
-    .sidenav img {
-        /* display: inline-block;*/
-        width: 140px;
-        height: 54.4px;
-
-
-        /*    align-items: flex-start;*/
-        top: 28px;
-        margin-left: 70px;
-        position: absolute;
-    }
-
-
-
-    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    #main {
-        transition: margin-left .5s;
-        padding: 20px;
-    }
-
-
-    /* SIDE NAVIGATION SLUT */
-
-    /* HEADER */
-
-    header {
-        background-image: url(forsidebilleder/mobil.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 80vh;
-        width: 100vw;
-    }
-
-    header h1 {
-        padding-top: 210px;
-        font-size: 2rem;
-        font-weight: 400;
-    }
-
-
-    .logo img {
-        width: 140px;
-        height: 54.4px;
-        top: 28px;
-        margin-left: 70px;
-        position: absolute;
-    }
-
-    .container {
-        display: inline-block;
-    }
-
-
-
-
-    .ikoner img {
-        display: inline-block;
-        justify-content: flex-end;
-        width: 25px;
-        height: 25px;
-        position: relative;
-        left: 78vw;
-        top: 4vw;
-        padding: 4px;
-    }
-
-    /* HEADER SLUT */
-
-
-    /* FOOTER */
-
-    .socialemedier img {
-        display: inline-block;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        padding: 6px;
-    }
-
-
-    footer {
-        background-color: #F4F1ED;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: Avenir;
-        padding: 20px;
-        position: relative;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-size: 0.7rem;
-        margin-top: 50px;
-    }
-
-    footer p {
-        line-height: 22px;
-        word-spacing: 12px;
-    }
-
-    footer p a:hover {
-        color: #cbad99;
-    }
-
-
-    footer a {
-        text-decoration: none;
-        color: black;
-    }
-
-
-    /* FOOTER SLUT */
-
-
-    /* GENERELLE TEKST */
-
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-        text-transform: uppercase;
-        font-weight: 200;
-        margin-top: 16px;
-        margin-bottom: 10px;
-
-    }
-
-    h2 {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 300;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 0px;
-    }
-
-    p {
-        font-family: Avenir;
-        line-height: 22px;
-        display: inline-block;
-
-    }
-
-
-    .border {
-        border: solid 0.5px black;
-        width: 30%;
-        margin: 40px 180px;
-        margin-top: 40px;
-    }
-
-    .pris {
-        font-weight: 500;
-    }
-
-    /* GENERELLE TEKST SLUT */
-
-
-    /* GRID */
-    .menu {
-        text-align: center;
-        padding: 2px;
-        margin-top: 20px;
-    }
-
-
-    button:hover {
-        color: #cbad99;
-    }
-
-    button:active {
-        color: #cbad99;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 9px;
-        font-family: "Raleway";
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        text-transform: uppercase;
-    }
-
-
-    .data-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        max-width: 1000px;
-        margin: auto;
-        grid-gap: 50px;
-    }
-
-
-    .info {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 20px;
-        font-size: 1rem;
-        cursor: pointer;
-    }
-
-    /* GRID */
-
-    /* MEDIA QUERIES */
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
         .sidenav {
-            padding-top: 15px;
+            height: 100%;
+            /* 100% Full-height */
+            width: 0;
+            /* 0 width - change this with JavaScript */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            background-color: #ffffff;
+            /* Black*/
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            padding-top: 120px;
+            /* Place content 60px from the top */
+            transition: 0.5s;
+            /* 0.5 second transition effect to slide in the sidenav */
         }
 
+        /* The navigation menu links */
         .sidenav a {
+            padding: 10px 8px 8px 88px;
+            text-decoration: none;
             font-size: 18px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+            font-family: Avenir;
+            font-weight: 100;
+            text-transform: uppercase;
         }
-    }
 
-    /* MEDIA QUERIES */
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #cbad99;
+        }
 
-    @media only screen and (min-width: 800px) {
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: -100px;
+            font-size: 2.5rem;
+            display: inline-block;
+            margin: 1rem 2.5rem;
+            cursor: pointer;
+        }
+
+
         .sidenav img {
-            width: 175px;
-            height: 67px;
+            /* display: inline-block;*/
+            width: 140px;
+            height: 54.4px;
+
+
+            /*    align-items: flex-start;*/
+            top: 28px;
+            margin-left: 70px;
+            position: absolute;
         }
+
+
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+
+        /* SIDE NAVIGATION SLUT */
+
+        /* HEADER */
 
         header {
-            background-image: url(forsidebilleder/sortiment_web.jpg);
+            background-image: url(forsidebilleder/mobil.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             height: 80vh;
             width: 100vw;
         }
 
-        .logo img {
-            width: 175px;
-            height: 67px;
-            top: 20px;
-        }
-
-        .sidenav img {
-            width: 175px;
-            height: 67px;
-            top: 20px;
-        }
-
         header h1 {
-            font-size: 3rem;
-            margin-top: -22px;
-        }
-
-
-        button {
-            font-size: 1.2rem;
-            padding: 15px;
-            font-family: "Raleway";
-            border: none;
-            cursor: pointer;
-            background-color: transparent;
-            text-transform: uppercase;
-        }
-
-        h2 {
+            padding-top: 210px;
             font-size: 2rem;
-            margin-bottom: 60px;
+            font-weight: 400;
         }
+
+
+        .logo img {
+            width: 140px;
+            height: 54.4px;
+            top: 28px;
+            margin-left: 70px;
+            position: absolute;
+        }
+
+        .container {
+            display: inline-block;
+        }
+
+
 
 
         .ikoner img {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            left: 92vw;
-            top: 2vw;
+            justify-content: flex-end;
+            width: 25px;
+            height: 25px;
             position: relative;
+            left: 78vw;
+            top: 4vw;
             padding: 4px;
         }
+
+        /* HEADER SLUT */
+
 
         /* FOOTER */
 
         .socialemedier img {
             display: inline-block;
             align-items: center;
-            width: 35px;
-            height: 35px;
-            word-spacing: 20px;
+            width: 30px;
+            height: 30px;
+            padding: 6px;
         }
 
 
@@ -390,28 +185,233 @@
             text-align: center;
             text-transform: uppercase;
             font-family: Avenir;
-            padding: 40px;
+            padding: 20px;
             position: relative;
             bottom: 0;
             left: 0;
             right: 0;
-            font-size: 1rem;
-            margin-top: 100px;
+            font-size: 0.7rem;
+            margin-top: 50px;
         }
 
         footer p {
-            line-height: 37px;
+            line-height: 22px;
             word-spacing: 12px;
         }
 
+        footer p a:hover {
+            color: #cbad99;
+        }
 
 
-    }
+        footer a {
+            text-decoration: none;
+            color: black;
+        }
 
-    /* FOOTER SLUT */
 
-    /* MEDIA QUERIES SLUT */
-</style>
+        /* FOOTER SLUT */
+
+
+        /* GENERELLE TEKST */
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-weight: 200;
+            margin-top: 16px;
+            margin-bottom: 10px;
+
+        }
+
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+
+        p {
+            font-family: Avenir;
+            line-height: 22px;
+            display: inline-block;
+
+        }
+
+
+        .border {
+            border: solid 0.5px black;
+            width: 30%;
+            margin: 40px 180px;
+            margin-top: 40px;
+        }
+
+        .pris {
+            font-weight: 500;
+        }
+
+        /* GENERELLE TEKST SLUT */
+
+
+        /* GRID */
+        .menu {
+            text-align: center;
+            padding: 2px;
+            margin-top: 20px;
+        }
+
+
+        button:hover {
+            color: #cbad99;
+        }
+
+        button:active {
+            color: #cbad99;
+        }
+
+        button {
+            font-size: 0.9rem;
+            padding: 9px;
+            font-family: "Raleway";
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            text-transform: uppercase;
+        }
+
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1000px;
+            margin: auto;
+            grid-gap: 50px;
+        }
+
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* GRID */
+
+        /* MEDIA QUERIES */
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        /* MEDIA QUERIES */
+
+        @media only screen and (min-width: 800px) {
+            .sidenav img {
+                width: 175px;
+                height: 67px;
+            }
+
+            header {
+                background-image: url(forsidebilleder/sortiment_web.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 80vh;
+                width: 100vw;
+            }
+
+            .logo img {
+                width: 175px;
+                height: 67px;
+                top: 20px;
+            }
+
+            .sidenav img {
+                width: 175px;
+                height: 67px;
+                top: 20px;
+            }
+
+            header h1 {
+                font-size: 3rem;
+                margin-top: -22px;
+            }
+
+
+            button {
+                font-size: 1.2rem;
+                padding: 15px;
+                font-family: "Raleway";
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 60px;
+            }
+
+
+            .ikoner img {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                left: 92vw;
+                top: 2vw;
+                position: relative;
+                padding: 4px;
+            }
+
+            /* FOOTER */
+
+            .socialemedier img {
+                display: inline-block;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                word-spacing: 20px;
+            }
+
+
+            footer {
+                background-color: #F4F1ED;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: Avenir;
+                padding: 40px;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 1rem;
+                margin-top: 100px;
+            }
+
+            footer p {
+                line-height: 37px;
+                word-spacing: 12px;
+            }
+
+
+
+        }
+
+        /* FOOTER SLUT */
+
+        /* MEDIA QUERIES SLUT */
+    </style>
 
 
 <body>
@@ -426,7 +426,7 @@
 
                 <a href="dansk.html">
                     <div class="logo">
-                        <img src="forsidebilleder/logo.png">
+                        <img src="forsidebilleder/logo.png" alt="dansklogo">
                     </div>
                 </a>
 
@@ -436,15 +436,15 @@
             </div>
 
             <div class="ikoner">
-                <img src="ui/soeg.svg">
-                <img src="ui/kurv.svg">
+                <img src="ui/soeg.svg" alt="soeg">
+                <img src="ui/kurv.svg" alt="kurv">
             </div>
 
 
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <img src="forsidebilleder/logo.png">
+                <img src="forsidebilleder/logo.png" alt="logo">
                 <a href="dansk.html">Forside</a><br>
                 <a href="#">Kundeservice</a>
                 <a href="#">Nyhedsbrev</a>
@@ -494,8 +494,8 @@
     <footer>
         <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
         <div class="socialemedier">
-            <img src="ui/fb.svg">
-            <img src="ui/ig.svg">
+            <img src="ui/fb.svg" alt="fb">
+            <img src="ui/ig.svg" alt="ig">
         </div>
     </footer>
 
