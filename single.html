@@ -37,21 +37,8 @@
             background-color: white;
             cursor: pointer;
             width: 80vw;
-
-
         }
 
-        #kurv button {
-            font-family: 'Raleway', sans-serif;
-            width: 300px;
-            height: 40px;
-            background: #EBE5DB;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10vw;
-
-
-        }
 
         #container,
         .sub_container {
@@ -63,31 +50,44 @@
 
         /* GRID SLUT */
 
-        /* BACK BUTTON */
+        /* BUTTONS */
 
         button {
             font-family: 'Raleway', sans-serif;
             width: 100px;
-            height: 30px;
+            height: 40px;
             background: #EBE5DB;
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 500;
             cursor: pointer;
             margin: 10px;
+
+        }
+
+        #kurv button {
+            font-family: 'Raleway', sans-serif;
+            width: 400px;
+            height: 50px;
+            background: #EBE5DB;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 10vw;
+            margin-left: 15px;
+        }
+
+        button:hover {
+            opacity: 50%;
         }
 
 
-        /* BACK BUTTON SLUT */
+        /* BUTTONS SLUT */
 
         /* TEKST */
 
-
-
         h1 {
-            width: 100%;
             margin-top: 100px;
             margin-bottom: 0;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align: center;
             font-family: 'Raleway', sans-serif;
             text-transform: uppercase;
@@ -95,15 +95,6 @@
 
         }
 
-
-        /* .oplysninger p {
-            border-bottom: solid 0.5px black;
-            width: 100%;
-            margin: 40px 0px;
-            margin-top: 40px;
-
-
-        }*/
 
         .bordertop {
             border: solid 0.5px black;
@@ -121,17 +112,31 @@
         }
 
 
-
         h2 {
+            font-size: 1.5rem;
             font-weight: 300;
             text-transform: uppercase;
         }
 
+        p {
+            line-height: 1.6rem;
+        }
 
         .pris {
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.2rem;
-            word-spacing: 240px;
+            /*         text-align: end;*/
+
+        }
+
+        .designeren {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .moed {
+            width: 450px;
         }
 
         /* TEKST SLUT */
@@ -170,17 +175,20 @@
             color: #cbad99;
         }
 
+
+        footer a {
+            text-decoration: none;
+            color: black;
+        }
+
+
         /* FOOTER SLUT */
 
 
         /* MEDIA QUERIES */
 
 
-        @media only screen and (min-width: 800px) {
-            .pris {
-                word-spacing: 350px;
-
-            }
+        @media only screen and (min-width: 1100px) {
 
             #container,
             .sub_container {
@@ -194,13 +202,13 @@
                 padding-right: 80px;
             }
 
-            .border {
+            /*    .border {
                 border: solid 0.5px black;
                 width: 20%;
                 margin: 40px 560px;
                 margin-top: 40px;
 
-            }
+            }*/
 
             .bordertop {
                 border: solid 0.5px black;
@@ -218,18 +226,36 @@
             }
 
             h1 {
-                width: 100%;
                 margin-top: 100px;
                 margin-bottom: 10px;
                 font-size: 2rem;
-                text-align: center;
-                font-family: 'Raleway', sans-serif;
-                text-transform: uppercase;
-                font-weight: 200;
 
             }
 
+            h2 {
+                font-size: 2rem;
+            }
 
+
+            .beskrivelse {
+                width: 420px;
+            }
+
+
+            .pris {
+                word-spacing: 265px;
+
+            }
+
+            #kurv button {
+                width: 400px;
+                height: 50px;
+                font-size: 1.2rem;
+                margin-left: 0;
+            }
+
+
+            /* FOOTER */
 
             .socialemedier img {
                 display: inline-block;
@@ -260,14 +286,9 @@
             }
 
 
-            /* MEDIA QUERIES SLUT */
+            /* FOOTER SLUT */
 
-            .border {
-                border-bottom: solid 0.5px black;
-                width: 30%;
-                margin: 40px 180px;
-                margin-top: 40px;
-            }
+            /* MEDIA QUERIES SLUT */
 
         }
 
@@ -279,7 +300,7 @@
 
 
     <section id="detalje">
-        <button id="luk">Tilbage</button>
+        <button id="tilbage">Tilbage</button>
         <article id="moebler">
             <div id="container">
 
@@ -300,6 +321,7 @@
 
             </div>
             <h1>Produktoplysninger</h1>
+            <br>
             <div class="bordertop"></div>
             <section class="oplysninger">
 
@@ -318,14 +340,9 @@
             <section class="udforsk">
 
                 <h1>Udforsk og kombiner</h1>
+                <br>
             </section>
 
-
-
-
-            <br>
-            <br>
-            <br>
 
 
 
@@ -335,6 +352,11 @@
                 <img class="udforskbillede3" src="" alt="">
                 <img class="udforskbillede1" src="" alt="">
             </section>
+
+
+            <h1>Mød designeren</h1>
+            <br>
+
             <div id="container">
                 <img class="designer" src="" alt="">
 
@@ -347,14 +369,15 @@
         </article>
     </section>
 
+    <main></main>
+
     <footer>
-        <p>Sortiment Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
         <div class="socialemedier">
             <img src="ui/fb.svg">
             <img src="ui/ig.svg">
         </div>
     </footer>
-
 
     <script>
         const Urlparameter = new URLSearchParams(window.location.search);
@@ -408,6 +431,8 @@
         }
 
     </script>
+
+
 </body>
 
 </html>
