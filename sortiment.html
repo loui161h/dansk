@@ -58,8 +58,9 @@
         background-color: #ffffff;
         overflow-x: hidden;
         padding-top: 120px;
-        transition: 0.5s;
         /* transition effekten gør at menuen er 0,5 sekunder om at slide ud */
+        transition: 0.5s;
+
     }
 
     /* Navigation med links som vi ændrer i herunder */
@@ -376,6 +377,7 @@
     /* FOOTER SLUT */
 
     /* MEDIA QUERIES SLUT */
+
 </style>
 
 
@@ -450,7 +452,7 @@
     <main></main>
 
     <footer>
-        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Kontakt</p>
         <div class="socialemedier">
             <img src="ui/fb.svg" alt="fb">
             <img src="ui/ig.svg" alt="ig">
@@ -458,15 +460,17 @@
     </footer>
 
     <script>
-        /* Set the width of the side navigation to 250px */
+        /* Her har vi sat width til 500px fordi menuen skal gå helt ud til kanten på mobilsiden*/
         function openNav() {
             document.getElementById("mySidenav").style.width = "500px";
         }
 
-        /* Set the width of the side navigation to 0 */
+        /* Her har vi sat width på side naven til 0 når den skal lukke igen*/
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
+        /* Her har vi startet med at lave variabler og linket til vores sheet, i forbindelse med filtrering*/
 
         let indretning = [];
         let filter = "alle";
@@ -475,6 +479,7 @@
 
         document.addEventListener("DOMContentLoaded", start);
 
+        /* Her har vi startet funktionen der skal filtrer møblerne*/
         function start() {
             document.querySelectorAll("nav button").forEach(knap => {
                 knap.addEventListener("click", filtrerIndretning)
@@ -487,6 +492,9 @@
             console.log(indretning);
             visIndretning();
         }
+
+        /* Herunder er funktionen der viser møblerne med navn, pris, billede osv,
+        og at man kan klikke på dem, hvilket fører til singleview */
 
         function visIndretning() {
             const container = document.querySelector(".data-container");
@@ -517,5 +525,8 @@
             document.querySelector("h2").textContent = this.textContent;
             visIndretning(); // kald funktionen vis igen med nyt filter
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
