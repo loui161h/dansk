@@ -265,11 +265,14 @@
     }
 
 
+    /* herunder har vi brugt grid til at opdele vores produkter på vores sortimentside i ens bokse.*/
     .data-container {
         display: grid;
+        /*herunder har vi lavet grid i kolonner, hvor en kolonne fylder 300px*/
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 1000px;
         margin: auto;
+        /*Her har vi lavet mellemrum(50px) mellem kolonnerne, både lodret og vandret*/
         grid-gap: 50px;
     }
 
@@ -377,7 +380,6 @@
     /* FOOTER SLUT */
 
     /* MEDIA QUERIES SLUT */
-
 </style>
 
 
@@ -486,12 +488,14 @@
             });
             loadData();
         }
+        /* Her hentes data og sendes videre til functionen visIndretning */
         async function loadData() {
             const response = await fetch(endpoint);
             indretning = await response.json();
             console.log(indretning);
             visIndretning();
         }
+
 
         /* Herunder er funktionen der viser møblerne med navn, pris, billede osv,
         og at man kan klikke på dem, hvilket fører til singleview */
@@ -525,8 +529,5 @@
             document.querySelector("h2").textContent = this.textContent;
             visIndretning(); // kald funktionen vis igen med nyt filter
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
