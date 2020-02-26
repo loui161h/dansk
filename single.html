@@ -359,6 +359,7 @@
 
 
     /* MEDIA QUERIES SLUT */
+
 </style>
 
 
@@ -468,7 +469,7 @@
     <main></main>
 
     <footer>
-        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Kontakt</p>
         <div class="socialemedier">
             <img src="ui/fb.svg" alt="fb">
             <img src="ui/ig.svg" alt="ig">
@@ -511,7 +512,7 @@
                     detalje.querySelector("h2").textContent = moebel.gsx$navn.$t;
                     detalje.querySelector(".produktimg").src = moebel.gsx$billede.$t;
                     /*  detalje.querySelector(".kategori").textContent = moebel.gsx$kategori.$t;*/
-                    detalje.querySelector(".pris").textContent = `Pris: ${moebel.gsx$pris.$t}kr.`;
+                    detalje.querySelector(".pris").textContent = `Pris ${moebel.gsx$pris.$t}kr.`;
 
 
                     detalje.querySelector(".beskrivelse").textContent = moebel.gsx$beskrivelse.$t;
@@ -536,7 +537,10 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
