@@ -7,7 +7,7 @@
     <title>dansk.</title>
     <!--    <link rel="stylesheet" href="">-->
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favi.png">
 </head>
 <style>
     /* GENERELLE INDSTILLINGER */
@@ -64,6 +64,8 @@
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 10vw;
+        width: 460px;
+        margin-left: 0;
         text-transform: uppercase;
     }
 
@@ -88,6 +90,7 @@
     }
 
 
+    /*
     .bordertop {
         border: solid 0.5px black;
         width: 80%;
@@ -102,33 +105,43 @@
         font-size: 1.2rem;
 
     }
+*/
 
 
     h2 {
         font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 600;
         text-transform: uppercase;
+        margin-top: 0;
     }
 
     p {
         line-height: 1.6rem;
     }
 
+
     .pris {
-        font-weight: 600;
-        font-size: 1.2rem;
+        font-weight: 700;
+        font-size: 1.1rem;
         /*         text-align: end;*/
+
+        word-spacing: 350px;
+
 
     }
 
     .designeren {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 600;
         text-transform: uppercase;
     }
 
-    .moed {
-        width: 450px;
+    .producent {
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
     }
 
     /* TEKST SLUT */
@@ -202,19 +215,38 @@
 
             }*/
 
+        /*
         .bordertop {
             border: solid 0.5px black;
             width: 70%;
             margin-left: 235px;
             display: inline-block;
         }
+*/
 
+        /*
         .oplysninger p {
             margin-left: 235px;
-
             word-spacing: 860px;
             font-size: 1.2rem;
 
+        }
+
+*/
+
+        details {
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+
+        summary {
+            font-family: Avenir;
+            font-size: 1.2rem;
+            width: 90vw;
+            height: 10vw;
+            border-radius: 1vw;
+            margin: 2vw 0 2vw 0;
+            padding: 1vw;
         }
 
         h1 {
@@ -229,21 +261,14 @@
         }
 
 
-        .beskrivelse {
-            width: 420px;
-        }
-
-
         .pris {
-            word-spacing: 265px;
-
+            word-spacing: 450px;
         }
 
         #kurv button {
-            width: 420px;
+            width: 560px;
             height: 55px;
             font-size: 1.2rem;
-            margin-left: 0;
             border: none;
         }
 
@@ -310,6 +335,7 @@
 
 
     /* MEDIA QUERIES SLUT */
+
 </style>
 
 
@@ -332,8 +358,6 @@
                     <h2></h2>
                     <p class="beskrivelse"></p>
                     <p class="copyright"></p>
-                    <!--                    <p class="kategori"></p>-->
-                    <!--                    <p class="navn"></p>-->
                     <p class="pris"></p>
 
 
@@ -346,6 +370,30 @@
             </div>
             <h1>Produktoplysninger</h1>
             <br>
+
+
+            <details id="produktoplysninger">
+
+                <summary>
+
+                    Detaljer
+
+                </summary>
+
+            </details>
+
+
+            <details id="vedkoeb">
+
+                <summary>
+
+                    Levering og refundering
+
+                </summary>
+
+            </details>
+
+            <!--
             <div class="bordertop"></div>
             <section class="oplysninger">
 
@@ -358,6 +406,7 @@
 
                 <div class="bordertop"></div>
             </section>
+-->
 
 
 
@@ -464,7 +513,10 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
