@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dansk.</title>
-    <!--    <link rel="stylesheet" href="">-->
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="forsidebilleder/favi.png">
 </head>
@@ -30,7 +29,7 @@
     /* GENERELT SLUT */
 
     /* SIDE NAVIGATION */
-
+    /* Side navigation menu */
     span {
         display: inline-block;
         margin: 1rem 2rem;
@@ -50,27 +49,20 @@
 
     .sidenav {
         height: 100%;
-        /* 100% Full-height */
         width: 0;
-        /* 0 width - change this with JavaScript */
+        /* 0 width - det ændrer vi med javascript*/
         position: fixed;
-        /* Stay in place */
         z-index: 1;
-        /* Stay on top */
         top: 0;
-        /* Stay at the top */
         left: 0;
         background-color: #ffffff;
-        /* Black*/
         overflow-x: hidden;
-        /* Disable horizontal scroll */
         padding-top: 120px;
-        /* Place content 60px from the top */
         transition: 0.5s;
-        /* 0.5 second transition effect to slide in the sidenav */
+        /* transition effekten gør at menuen er 0,5 sekunder om at slide ud */
     }
 
-    /* The navigation menu links */
+    /* Navigation med links som vi ændrer i herunder */
     .sidenav a {
         padding: 10px 8px 8px 88px;
         text-decoration: none;
@@ -83,12 +75,11 @@
         text-transform: uppercase;
     }
 
-    /* When you mouse over the navigation links, change their color */
     .sidenav a:hover {
         color: #cbad99;
     }
 
-    /* Position and style the close button (top right corner) */
+    /* Her styler vi x knappen */
     .sidenav .closebtn {
         position: absolute;
         top: 0;
@@ -99,31 +90,25 @@
         cursor: pointer;
     }
 
+    /* Her skubber vi indholdet som vi gerne vil have det, så det står rigtigt i menuen*/
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
 
+    /* SIDE NAVIGATION SLUT */
+
+
+    /* HEADER */
     .sidenav img {
-        /* display: inline-block;*/
         width: 140px;
         height: 54.4px;
-
-
-        /*    align-items: flex-start;*/
         top: 28px;
         margin-left: 70px;
         position: absolute;
     }
 
 
-
-    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    #main {
-        transition: margin-left .5s;
-        padding: 20px;
-    }
-
-
-    /* SIDE NAVIGATION SLUT */
-
-    /* HEADER */
 
     header {
         background-image: url(forsidebilleder/mobil.jpg);
@@ -299,18 +284,6 @@
     /* GRID */
 
     /* MEDIA QUERIES */
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
-        }
-
-        .sidenav a {
-            font-size: 18px;
-        }
-    }
-
-    /* MEDIA QUERIES */
 
     @media only screen and (min-width: 800px) {
         .sidenav img {
@@ -414,6 +387,7 @@
         <nav>
 
             <div class="container">
+                <!-- Her har vi valgt at bruge et + til at åbne sidenavigationen. -->
                 <span onclick="openNav()">+</span>
 
                 <a href="dansk.html">
@@ -427,6 +401,7 @@
                 <img src="ui/soeg.svg" alt="soeg">
                 <img src="ui/kurv.svg" alt="kurv">
             </div>
+            <!--  her har vi tilføjet indhold til navigationen når man åbner menuen via + -->
 
 
 
@@ -439,11 +414,6 @@
                 <a href="#">Om Dansk</a>
                 <a href="#">Kontakt</a>
             </div>
-            <!-- Use any element to open the sidenav -->
-
-
-
-            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
         </nav>
 
         <h1>Sortiment</h1>
