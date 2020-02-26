@@ -14,6 +14,7 @@
     body {
         background-color: white;
         font-family: 'Raleway', sans-serif;
+        margin: 0;
 
     }
 
@@ -23,147 +24,11 @@
     }
 
 
-    /* SIDE NAVIGATION */
-    /* The side navigation menu */
-    span {
-        display: inline-block;
-        margin: 1rem 2rem;
-        font-size: 2.5rem;
-        cursor: pointer;
-        position: absolute;
-    }
-
-    span a:hover {
-        color: #cbad99;
-    }
-
-
-    span:hover {
-        opacity: 50%;
-    }
-
-    .sidenav {
-        height: 100%;
-        /* 100% Full-height */
-        width: 0;
-        /* 0 width - change this with JavaScript */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Stay on top */
-        top: 0;
-        /* Stay at the top */
-        left: 0;
-        background-color: #ffffff;
-        /* Black*/
-        overflow-x: hidden;
-        /* Disable horizontal scroll */
-        padding-top: 120px;
-        /* Place content 60px from the top */
-        transition: 0.5s;
-        /* 0.5 second transition effect to slide in the sidenav */
-    }
-
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 10px 8px 8px 88px;
-        text-decoration: none;
-        font-size: 18px;
-        color: #000000;
-        display: block;
-        transition: 0.3s;
-        font-family: Avenir;
-        font-weight: 100;
-        text-transform: uppercase;
-    }
-
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {
-        color: #cbad99;
-    }
-
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        left: -100px;
-        font-size: 2.5rem;
-        display: inline-block;
-        margin: 1rem 2.5rem;
-        cursor: pointer;
-    }
-
-    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    #main {
-        transition: margin-left .5s;
-        padding: 20px;
-    }
-
-
-    /* SIDE NAVIGATION */
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
-        }
-
-        .sidenav a {
-            font-size: 18px;
-        }
-    }
-
-    /* Menu slut */
-
-
-    /* MOBILE FIRST */
-
-    /* HEADER */
-    .sidenav img {
-        /* display: inline-block;*/
-        width: 140px;
-        height: 54.4px;
-
-
-        /*    align-items: flex-start;*/
-        top: 28px;
-        margin-left: 70px;
-        position: absolute;
-    }
-
-    .logo img {
-        width: 140px;
-        height: 54.4px;
-        top: 28px;
-        margin-left: 70px;
-        position: absolute;
-    }
-
-    .logo img:hover {
-        opacity: 50%;
-    }
-
-    .container {
-        display: inline-block;
-    }
 
 
 
-    .ikoner img {
-        display: inline-block;
-        justify-content: flex-end;
-        width: 25px;
-        height: 25px;
-        position: relative;
-        left: 78vw;
-        top: 4vw;
-        padding: 4px;
-    }
 
-    .ikoner img:hover {
-        opacity: 50%;
-    }
 
-    /* HEADER SLUT */
 
     /* GENERELLE INDSTILLINGER SLUT */
 
@@ -192,25 +57,21 @@
 
     button {
         font-family: 'Raleway', sans-serif;
-        width: 100px;
-        height: 40px;
-        background: #EBE5DB;
-        font-size: 1rem;
+        height: 50px;
+        font-size: 0.9rem;
         font-weight: 500;
         cursor: pointer;
-        margin: 10px;
-
+        margin: 20px;
+        border: none;
     }
 
     #kurv button {
         font-family: 'Raleway', sans-serif;
-        width: 400px;
-        height: 50px;
         background: #EBE5DB;
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 10vw;
-        margin-left: 15px;
+        text-transform: uppercase;
     }
 
     button:hover {
@@ -284,9 +145,9 @@
     .socialemedier img {
         display: inline-block;
         align-items: center;
-        width: 30px;
-        height: 30px;
-        padding: 6px;
+        width: 25px;
+        height: 25px;
+        word-spacing: 10px;
     }
 
 
@@ -386,10 +247,11 @@
         }
 
         #kurv button {
-            width: 400px;
-            height: 50px;
+            width: 420px;
+            height: 55px;
             font-size: 1.2rem;
             margin-left: 0;
+            border: none;
         }
 
 
@@ -398,9 +260,9 @@
         .socialemedier img {
             display: inline-block;
             align-items: center;
-            width: 35px;
-            height: 35px;
-            word-spacing: 20px;
+            width: 30px;
+            height: 30px;
+            word-spacing: 25px;
         }
 
 
@@ -451,6 +313,7 @@
     }
 
     /* MEDIA QUERIES SLUT */
+
 </style>
 
 
@@ -458,67 +321,28 @@
 <body>
     <header>
 
-        <nav>
-            <div class="container">
-                <span onclick="openNav()">+</span>
-
-                <a href="dansk.html">
-                    <div class="logo">
-                        <img src="forsidebilleder/logo.png" alt="dansklogo">
-                    </div>
-                </a>
-
-                <!--<div class="sidebar">
-                    <p>est. denmark 2020</p>
-                </div>-->
-            </div>
-
-            <div class="ikoner">
-                <img src="ui/soeg.svg" alt="soeg">
-                <img src="ui/kurv.svg" alt="kurv">
-            </div>
-
-
-
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <img class="logo" src="forsidebilleder/logo.png" alt="logo">
-                <a href="sortiment.html">Sortiment</a><br>
-
-                <a href="#">Kundeservice</a>
-                <a href="#">Nyhedsbrev</a>
-                <a href="#">Om Dansk</a>
-                <a href="#">Kontakt</a>
-            </div>
-
-
-            <!-- Use any element to open the sidenav -->
-
-
-            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-
-
-        </nav>
 
     </header>
 
 
     <section id="detalje">
-        <button id="tilbage">Tilbage</button>
+        <button id="tilbage">← Tilbage til produktview</button>
         <article id="moebler">
             <div class="sub_container">
 
                 <img class="produktimg" src="" alt="produktimg">
                 <section>
-
+                    <p class="producent"></p>
                     <h2></h2>
                     <p class="beskrivelse"></p>
-                    <p class="kategori"></p>
-                    <p class="navn"></p>
+                    <p class="copyright"></p>
+                    <!--                    <p class="kategori"></p>-->
+                    <!--                    <p class="navn"></p>-->
                     <p class="pris"></p>
-                    <p class="producent"></p>
 
-                    <div id="kurv"> <button>Læg i Kurv</button></div>
+
+
+                    <div id="kurv"> <button>Læg i kurv</button></div>
 
                 </section>
 
@@ -615,14 +439,15 @@
             console.log(moebler);
             moebler.feed.entry.forEach(moebel => {
                 if (moebel.gsx$id.$t == moebelId) {
+                    detalje.querySelector(".producent").textContent = moebel.gsx$producent.$t;
                     detalje.querySelector("h2").textContent = moebel.gsx$navn.$t;
                     detalje.querySelector(".produktimg").src = moebel.gsx$billede.$t;
                     /*  detalje.querySelector(".kategori").textContent = moebel.gsx$kategori.$t;*/
-                    detalje.querySelector(".pris").textContent = `Pris: ${moebel.gsx$pris.$t},-`;
-                    /* detalje.querySelector(".producent").textContent = moebel.gsx$producent.$t;*/
+                    detalje.querySelector(".pris").textContent = `Pris: ${moebel.gsx$pris.$t}kr.`;
+
 
                     detalje.querySelector(".beskrivelse").textContent = moebel.gsx$beskrivelse.$t;
-
+                    detalje.querySelector(".copyright").textContent = moebel.gsx$copyright.$t;
                     detalje.querySelector(".udforskbillede1").src = moebel.gsx$udforsk1.$t;
                     detalje.querySelector(".udforskbillede2").src = moebel.gsx$udforsk2.$t;
                     detalje.querySelector(".udforskbillede3").src = moebel.gsx$udforsk3.$t;
@@ -643,7 +468,10 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>

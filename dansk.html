@@ -158,6 +158,9 @@
         }
 
 
+        .ikoner img:hover {
+            opacity: 50%;
+        }
 
         .ikoner img {
             display: inline-block;
@@ -170,9 +173,6 @@
             padding: 4px;
         }
 
-        .ikoner img:hover {
-            opacity: 50%;
-        }
 
         /* HEADER SLUT */
 
@@ -249,9 +249,9 @@
         .socialemedier img {
             display: inline-block;
             align-items: center;
-            width: 30px;
-            height: 30px;
-            padding: 6px;
+            width: 25px;
+            height: 25px;
+            word-spacing: 10px;
         }
 
 
@@ -291,8 +291,6 @@
 
 
         /* UDFORSK SLUT */
-
-
 
         .border {
             border: solid 0.5px black;
@@ -368,8 +366,6 @@
 
 
 
-
-
         /* MEDIA QUERIES */
 
         @media only screen and (min-width: 800px) {
@@ -381,6 +377,18 @@
                 width: 100%;
             }
 
+            .ikoner img {
+                display: inline-block;
+                justify-content: flex-end;
+                width: 30px;
+                height: 30px;
+                left: 92vw;
+                top: 1vw;
+                position: relative;
+                padding: 4px;
+            }
+
+
             .logo img {
                 width: 175px;
                 height: 67px;
@@ -391,16 +399,6 @@
                 width: 175px;
                 height: 67px;
                 top: 20px;
-            }
-
-            .ikoner img {
-                display: inline-block;
-                width: 35px;
-                height: 35px;
-                left: 92vw;
-                top: 2vw;
-                position: relative;
-                padding: 4px;
             }
 
             .tekst h2 {
@@ -562,11 +560,10 @@
             .socialemedier img {
                 display: inline-block;
                 align-items: center;
-                width: 35px;
-                height: 35px;
-                word-spacing: 18px;
+                width: 30px;
+                height: 30px;
+                word-spacing: 25px;
             }
-
 
             footer {
                 background-color: #F4F1ED;
@@ -613,10 +610,6 @@
                         <img src="forsidebilleder/logo.png" alt="dansklogo">
                     </div>
                 </a>
-
-                <!--<div class="sidebar">
-                    <p>est. denmark 2020</p>
-                </div>-->
             </div>
 
             <div class="ikoner">
