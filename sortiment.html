@@ -506,11 +506,11 @@
                     let klon = template.cloneNode(true).content;
                     klon.querySelector(".navn").textContent = moebler.gsx$navn.$t;
                     klon.querySelector(".pris").textContent = ` ${moebler.gsx$pris.$t} kr.`;
-                    klon.querySelector("img").src =
-                        moebler.gsx$billede.$t;
+                    klon.querySelector("img").src = moebler.gsx$billede.$t;
+                    console.log("gjghjgjhgjhg", moebler.gsx$id.$t);
+
                     klon.querySelector(".moebler").addEventListener("click", () => {
                         //visDetalje(moebler);
-                        console.log(moebler.gsx$id.$t);
                         location.href = "single.html?id=" + moebler.gsx$id.$t;
                     });
                     container.appendChild(klon);
