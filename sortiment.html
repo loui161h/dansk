@@ -35,9 +35,8 @@
         margin: 1rem 2rem;
         font-size: 2.5rem;
         cursor: pointer;
-        position: absolute;
+        position: fixed;
     }
-
 
     span:hover {
         opacity: 50%;
@@ -157,9 +156,8 @@
     .socialemedier img {
         display: inline-block;
         align-items: center;
-        width: 25px;
-        height: 25px;
-        word-spacing: 10px;
+        width: 22px;
+        height: 22px;
     }
 
     footer {
@@ -178,7 +176,7 @@
 
     footer p {
         line-height: 22px;
-        word-spacing: 12px;
+        word-spacing: 10px;
     }
 
     footer p a:hover {
@@ -373,7 +371,6 @@
             align-items: center;
             width: 30px;
             height: 30px;
-            word-spacing: 25px;
         }
     }
 
@@ -456,8 +453,8 @@
     <footer>
         <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Kontakt</p>
         <div class="socialemedier">
-            <img src="ui/fb.svg" alt="fb">
-            <img src="ui/ig.svg" alt="ig">
+            <img src="ui/faceb.png" alt="fb">
+            <img src="ui/insta.png" alt="ig">
         </div>
     </footer>
 
@@ -509,11 +506,11 @@
                     let klon = template.cloneNode(true).content;
                     klon.querySelector(".navn").textContent = moebler.gsx$navn.$t;
                     klon.querySelector(".pris").textContent = ` ${moebler.gsx$pris.$t} kr.`;
-                    klon.querySelector("img").src =
-                        moebler.gsx$billede.$t;
+                    klon.querySelector("img").src = moebler.gsx$billede.$t;
+                    console.log("gjghjgjhgjhg", moebler.gsx$id.$t);
+
                     klon.querySelector(".moebler").addEventListener("click", () => {
                         //visDetalje(moebler);
-                        console.log(moebler.gsx$id.$t);
                         location.href = "single.html?id=" + moebler.gsx$id.$t;
                     });
                     container.appendChild(klon);
