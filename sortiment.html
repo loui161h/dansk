@@ -58,8 +58,9 @@
         background-color: #ffffff;
         overflow-x: hidden;
         padding-top: 120px;
-        transition: 0.5s;
         /* transition effekten gør at menuen er 0,5 sekunder om at slide ud */
+        transition: 0.5s;
+
     }
 
     /* Navigation med links som vi ændrer i herunder */
@@ -264,11 +265,14 @@
     }
 
 
+    /* herunder har vi brugt grid til at opdele vores produkter på vores sortimentside i ens bokse.*/
     .data-container {
         display: grid;
+        /*herunder har vi lavet grid i kolonner, hvor en kolonne fylder 300px*/
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 1000px;
         margin: auto;
+        /*Her har vi lavet mellemrum(50px) mellem kolonnerne, både lodret og vandret*/
         grid-gap: 50px;
     }
 
@@ -450,7 +454,7 @@
     <main></main>
 
     <footer>
-        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Dansk Kontakt</p>
+        <p> <a href="sortiment.html">Sortiment</a> Kunderservice Nyhedsbrev<br>Om Kontakt</p>
         <div class="socialemedier">
             <img src="ui/fb.svg" alt="fb">
             <img src="ui/ig.svg" alt="ig">
@@ -458,15 +462,17 @@
     </footer>
 
     <script>
-        /* Set the width of the side navigation to 250px */
+        /* Her har vi sat width til 500px fordi menuen skal gå helt ud til kanten på mobilsiden*/
         function openNav() {
             document.getElementById("mySidenav").style.width = "500px";
         }
 
-        /* Set the width of the side navigation to 0 */
+        /* Her har vi sat width på side naven til 0 når den skal lukke igen*/
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
+        /* Her har vi startet med at lave variabler og linket til vores sheet, i forbindelse med filtrering*/
 
         let indretning = [];
         let filter = "alle";
@@ -475,18 +481,24 @@
 
         document.addEventListener("DOMContentLoaded", start);
 
+        /* Her har vi startet funktionen der skal filtrer møblerne*/
         function start() {
             document.querySelectorAll("nav button").forEach(knap => {
                 knap.addEventListener("click", filtrerIndretning)
             });
             loadData();
         }
+        /* Her hentes data og sendes videre til functionen visIndretning */
         async function loadData() {
             const response = await fetch(endpoint);
             indretning = await response.json();
             console.log(indretning);
             visIndretning();
         }
+
+
+        /* Herunder er funktionen der viser møblerne med navn, pris, billede osv,
+        og at man kan klikke på dem, hvilket fører til singleview */
 
         function visIndretning() {
             const container = document.querySelector(".data-container");

@@ -359,7 +359,6 @@
 
 
     /* MEDIA QUERIES SLUT */
-
 </style>
 
 
@@ -417,22 +416,6 @@
 
             </details>
 
-            <!--
-            <div class="bordertop"></div>
-            <section class="oplysninger">
-
-                <p>Oplysninger +</p>
-
-
-                <div class="bordertop"></div>
-                <p>Refundering +</p>
-
-
-                <div class="bordertop"></div>
-            </section>
--->
-
-
 
             <section class="udforsk">
 
@@ -476,7 +459,10 @@
         </div>
     </footer>
 
+
+
     <script>
+        /* Her har vi startet med at linket til vores sheet, i forbindelse med møbel id'et så man får det rigtige møbel frem.*/
         const Urlparameter = new URLSearchParams(window.location.search);
 
         const moebelId = Urlparameter.get("id");
@@ -487,11 +473,13 @@
 
         document.addEventListener("DOMContentLoaded", hentData);
 
+        /* herefter starter vi funktionen hvor vi henter data om møblet*/
         function start() {
             hentData();
             addEventListenersToButtons();
         }
 
+        /* her henter vi vores data så vi kan vise det pågældende møbel på siden*/
         async function hentData() {
             const response = await fetch(endpoint);
             console.log(response);
@@ -501,25 +489,27 @@
 
         }
 
+        /* visMoebel sætter hver enkelt møbel ind i html'en */
+
+
         function visMoebel() {
             detalje.querySelector("button").addEventListener("click", () => {
                 history.back();
             })
+
+             /* Ved hjælp af funktionen visMoebel, og nedenstående kode, kommer alt information frem om møblet, altså navn, billede, beskrivelse, pris, indretningsbilleder, producent og designer*/
+
             console.log(moebler);
             moebler.feed.entry.forEach(moebel => {
                 if (moebel.gsx$id.$t == moebelId) {
                     detalje.querySelector(".producent").textContent = moebel.gsx$producent.$t;
                     detalje.querySelector("h2").textContent = moebel.gsx$navn.$t;
                     detalje.querySelector(".produktimg").src = moebel.gsx$billede.$t;
-                    /*  detalje.querySelector(".kategori").textContent = moebel.gsx$kategori.$t;*/
                     detalje.querySelector(".pris").textContent = `Pris ${moebel.gsx$pris.$t}kr.`;
-
-
                     detalje.querySelector(".beskrivelse").textContent = moebel.gsx$beskrivelse.$t;
                     detalje.querySelector(".copyright").textContent = moebel.gsx$copyright.$t;
                     detalje.querySelector(".udforskbillede1").src = moebel.gsx$udforsk1.$t;
                     detalje.querySelector(".udforskbillede2").src = moebel.gsx$udforsk2.$t;
-                    //detalje.querySelector(".udforskbillede3").src = moebel.gsx$udforsk3.$t;
                     detalje.querySelector(".designer").src = moebel.gsx$designerimg.$t;
                     detalje.querySelector(".designeren").textContent = moebel.gsx$designer.$t;
                     detalje.querySelector(".moed").textContent = moebel.gsx$moed.$t;
@@ -527,20 +517,7 @@
             });
 
         }
-
-        /* Set the width of the side navigation to 250px */
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "500px";
-        }
-
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-
     </script>
 
 
-</body>
-
-</html>
+</body></html>
