@@ -33,6 +33,13 @@
         opacity: 50%;
     }
 
+    .padding {
+        padding: 30px 40px;
+    }
+
+    .padding2 {
+        padding: 0px 40px;
+    }
 
     /* GENERELLE INDSTILLINGER SLUT*/
 
@@ -69,7 +76,6 @@
         padding-top: 120px;
         /* transition effekten gør at menuen er 0,5 sekunder om at slide ud */
         transition: 0.5s;
-
     }
 
     /* Navigation med links som vi ændrer i herunder */
@@ -96,7 +102,7 @@
         left: -100px;
         font-size: 2.5rem;
         display: inline-block;
-        margin: 1rem 2.5rem;
+        margin: 1.1rem 2.5rem;
         cursor: pointer;
     }
 
@@ -118,6 +124,7 @@
         top: 28px;
         margin-left: 70px;
         position: absolute;
+
     }
 
     .logo img {
@@ -142,8 +149,8 @@
         width: 33px;
         height: 33px;
         position: relative;
-        left: 80vw;
-        top: 4vw;
+        left: 77vw;
+        top: 5vw;
         padding: 4px;
     }
 
@@ -170,8 +177,7 @@
     }
 
     .tekst h2 {
-        margin: 50px;
-        padding: 40px;
+        padding: 60px 40px 30px 40px;
         text-align: center;
         font-size: 1.2rem;
         line-height: 26px;
@@ -224,34 +230,20 @@
 
     /* UDFORSK */
 
-    .pk22 img {
-        width: 80%;
-        padding-left: 100px;
-        margin-top: -160px;
 
-    }
-
-    .box {
-        background-color: #DCCEC1;
-        width: 350px;
-        height: 220px;
-        margin-top: 100px;
-    }
 
     .pk22 p {
         font-family: Avenir;
         font-size: 1rem;
         margin: 0;
-        width: 350px;
         font-weight: 100;
-        padding-left: 100px;
+
     }
 
     .pk22 h3 {
         font-family: Avenir;
         font-size: 1.1rem;
         margin-top: 15px;
-        padding-left: 100px;
     }
 
 
@@ -262,7 +254,6 @@
     .section2 {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 100px;
     }
 
     .section2 h3 {
@@ -273,8 +264,6 @@
     .section22 h1 {
         text-align: center;
         font-size: 1.5rem;
-        margin: 35px;
-        margin-top: 90px;
         text-transform: uppercase;
     }
 
@@ -293,12 +282,13 @@
 
     .citat {
         background-color: #EBE5DB;
-        margin: 60px;
-        padding: 25px 50px;
+
         text-align: center;
         font-family: Avenir;
         font-size: 1.2rem;
         font-style: italic;
+        margin: 30px 40px;
+        padding: 25px;
     }
 
     /* CITAT SLUT */
@@ -306,7 +296,7 @@
 
     /* KONTAKT  */
     .kontakt {
-        margin: 50px;
+        /*        margin: 50px;*/
         padding: 30px;
         text-align: center;
         font-family: Avenir;
@@ -338,7 +328,9 @@
             width: 175px;
             height: 67px;
             top: 20px;
+            margin-left: 70px;
         }
+
 
         .sidenav img {
             width: 175px;
@@ -366,6 +358,7 @@
         .section2 {
             display: flex;
             flex-wrap: wrap;
+            margin: 20px 100px;
         }
 
         .section2 h3 {
@@ -540,11 +533,16 @@
         }
 
         /* FOOTER SLUT */
+
+
+        .padding {
+            padding: 0;
+        }
     }
 
-    @media only screen and (max-width: 400px) {
+    /*    @media only screen and (min-width: 400px) {
         .pk22 img {
-            width: 0%;
+            width: 100%;
         }
 
         .pk22 p {
@@ -563,15 +561,12 @@
             padding-left: 200px;
         }
 
-        .border {
-            margin: 20px 250px;
-        }
 
-
-    }
+    }*/
 
 
     /* MEDIA QUERIES SLUT */
+
 </style>
 
 
@@ -623,7 +618,7 @@
 
 
 
-    <div class="section">
+    <div class="section padding">
         <div class="pk22">
             <div class="box"> </div>
             <img src="forsidebilleder/1600x900_pk22%20wicker%20png.png" alt="pk22billede">
@@ -637,11 +632,11 @@
     </div>
 
 
-    <div class="section22">
+    <div class="section22 padding">
         <h1>Gå på opdagelse i tidens tendenser</h1>
     </div>
 
-    <div class="section2">
+    <div class="section2 padding2">
         <div class="col">
             <img src="forsidebilleder/farveguidebom200101-23fowHEzd9HnAbpGTCKvfg.jpg" alt="beige">
             <h3>Blid beige og sort</h3>
@@ -659,7 +654,7 @@
     </div>
 
 
-    <div class="kontakt">
+    <div class="kontakt padding">
         <h2><b>Hvordan kan vi hjælpe dig? </b></h2>
         <p>Tøv endelig ikke med at sende os en besked. Sidder du med et eller flere spørgsmål, er du altid velkommen til at henvende dig via kontakt, og vi vender hurtigst muligt retur til dig.</p>
     </div>
@@ -676,6 +671,7 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
     </script>
 
     <footer>
@@ -688,4 +684,6 @@
 
     </footer>
 
-</body></html>
+</body>
+
+</html>

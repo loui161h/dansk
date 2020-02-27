@@ -22,6 +22,10 @@
         object-fit: cover;
     }
 
+    .padding {
+        padding: 0px 20px;
+    }
+
     /* GENERELLE INDSTILLINGER SLUT */
 
     /* GRID */
@@ -54,7 +58,6 @@
         font-weight: 500;
         cursor: pointer;
         margin: 20px;
-        border: none;
     }
 
     #kurv button {
@@ -62,10 +65,10 @@
         background: #EBE5DB;
         font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 10vw;
-        width: 460px;
+        width: 100%;
         margin-left: 0;
         text-transform: uppercase;
+        border: none;
     }
 
     button:hover {
@@ -78,7 +81,7 @@
     /* TEKST */
 
     h1 {
-        margin-top: 100px;
+        margin-top: 70px;
         margin-bottom: 0;
         font-size: 1.5rem;
         text-align: center;
@@ -103,10 +106,6 @@
     .pris {
         font-weight: 700;
         font-size: 1.1rem;
-        /*         text-align: end;*/
-        word-spacing: 350px;
-
-
     }
 
     .designeren {
@@ -175,6 +174,7 @@
         font-family: Avenir;
         font-size: 1rem;
         padding: 2vw;
+        margin: 0px 20px;
     }
 
     .summary2 {
@@ -182,6 +182,7 @@
         font-family: Avenir;
         font-size: 1rem;
         padding: 2vw;
+        margin: 0px 20px;
     }
 
 
@@ -243,6 +244,7 @@
             font-family: Avenir;
             font-size: 1.2rem;
             padding: 1.5vw;
+            margin: 0px;
         }
 
         .summary2 {
@@ -250,6 +252,7 @@
             font-family: Avenir;
             font-size: 1.2rem;
             padding: 1.5vw;
+            margin: 0px;
         }
 
         h1 {
@@ -330,6 +333,12 @@
             position: relative;
             padding: 4px;
         }
+
+
+        button {
+
+            border: none;
+        }
     }
 
 
@@ -337,6 +346,7 @@
 
 
     /* MEDIA QUERIES SLUT */
+
 </style>
 
 
@@ -350,8 +360,8 @@
 
     <section id="detalje">
         <button id="tilbage">← Tilbage til produktview</button>
-        <article id="moebler">
-            <div class="sub_container">
+        <article id="moebler padding">
+            <div class="sub_container padding">
 
                 <img class="produktimg" src="" alt="produktimg">
                 <section>
@@ -375,7 +385,7 @@
 
             <details id="produktoplysninger">
 
-                <summary class=summary1>
+                <summary class="summary1">
 
                     Detaljer
 
@@ -386,7 +396,7 @@
 
             <details id="vedkoeb">
 
-                <summary class=summary2>
+                <summary class="summary2">
 
                     Levering og refundering
 
@@ -395,7 +405,7 @@
             </details>
 
 
-            <section class="udforsk">
+            <section class="udforsk padding">
 
                 <h1>Udforsk og kombiner</h1>
                 <br>
@@ -404,7 +414,7 @@
 
 
 
-            <section class="sub_container">
+            <section class="sub_container padding">
 
                 <img class="udforskbillede1" src="" alt="udforsk1">
                 <img class="udforskbillede2" src="" alt="udforsk2">
@@ -415,7 +425,7 @@
             <h1>Mød designeren</h1>
             <br>
 
-            <div class="sub_container">
+            <div class="sub_container padding">
                 <img class="designer" src="" alt="designerimg">
 
                 <section>
@@ -495,7 +505,10 @@
             });
 
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
